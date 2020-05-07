@@ -7,16 +7,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href=" https://api.dexcom.com/v2/oauth2/login?client_id=I8FWZf7DOPOdDii3Elv2Xd6U0BrTPffn&redirect_uri=http://localhost:8080&response_type=code&scope=offline_access&state=auth"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Log In
         </a>
       </header>
     </div>
