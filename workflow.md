@@ -6,3 +6,4 @@
 1100 : read www.learnhowtoprogram.com lesson on API calls with react
 1200 : lunch from 11-12
 1230 : continue researching API calls with react 
+1300 : read Dexcom Developer documentation
