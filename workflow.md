@@ -7,3 +7,5 @@
 1200 : lunch from 11-12
 1230 : continue researching API calls with react 
 1300 : read Dexcom Developer documentation
+1330 : debug api call for bearer token in CurrentBloodSugar.js
+1400 : debug accessing environmental variables in CurrentBloodSugar.js
