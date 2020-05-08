@@ -10,3 +10,4 @@
 1330 : debug api call for bearer token in CurrentBloodSugar.js
 1400 : debug accessing environmental variables in CurrentBloodSugar.js
 1430 : break 1415-1430
+1500 : read Dexcom Developer documentation
