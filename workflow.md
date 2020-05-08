@@ -11,3 +11,5 @@
 1400 : debug accessing environmental variables in CurrentBloodSugar.js
 1430 : break 1415-1430
 1500 : read Dexcom Developer documentation
+1530 : refactor CurrentBloodSugarComponent to intake authorization code as prop
+1600 : troubleshoot regex to extract authorization code from URL
