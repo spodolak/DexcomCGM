@@ -14,3 +14,4 @@
 1530 : refactor CurrentBloodSugarComponent to intake authorization code as prop
 1600 : troubleshoot regex to extract authorization code from URL
 1630 : read Dexcom Developer documentation
+1700 : continue troubleshooting Dexcom post request for authorization code
