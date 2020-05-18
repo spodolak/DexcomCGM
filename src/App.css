@@ -146,13 +146,18 @@ body {
   position: absolute;
   font-size: 60px;
   color: white;
-  top: 36.5%;
-  right: 45%;
+  top: 37%;
+  right: 50%;
   bottom: 50%;
-  left: 38%;
+  left: 37%;
+
+
+  /* width: 180px;
+  height: 180px; */
+  /* background-position: 100% 100%; */
 }
 
-/* LOG IN BUTTON */
+/* SQUARE TEXT BUTTON */
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
 
 h1 {
@@ -193,4 +198,34 @@ button.outline:hover {
 button.outline:active {
   border-radius: 22px;
 }
+
+
+/* ROUND ICON BUTTON */
+button.round {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  color: #2D268E;
+  font-size: 30px;
+  border-color: #2D268E;
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 50% 50%;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+button.round a {
+  text-decoration: none;
+}
+button.round:hover {
+  color: white;
+  background: #2D268E;
+  border-color: white;
+  transition: all 0.2s linear;
+}
+button.round:active {
+  border-radius: 50%;
+}
+
 
