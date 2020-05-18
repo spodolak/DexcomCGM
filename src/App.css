@@ -1,3 +1,4 @@
+/* REACT APP STYLING */
 .App {
   text-align: center;
 }
@@ -14,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #ffffff;
+  background-image: linear-gradient(rgb(236, 236, 236), white, white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,8 +42,14 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-image: linear-gradient(rgb(236, 236, 236), white, white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
 }
 
+.welcome-page{
+  margin-top: -20%;
+}
+
+/* ORB STYLING */
 .orb {
   width: 180px;
   height: 180px;
@@ -130,6 +137,8 @@ body {
           align-items: center;
 }
 
+
+/* BLOOD SUGAR DISPLAY STYLING */
 .egvs {
   z-index: 0;
   content: "";
@@ -137,8 +146,51 @@ body {
   position: absolute;
   font-size: 60px;
   color: white;
-  top: 40%;
-  /* right: 50%;
+  top: 36.5%;
+  right: 45%;
   bottom: 50%;
-  left: 50%; */
+  left: 38%;
 }
+
+/* LOG IN BUTTON */
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
+
+h1 {
+  font-family: 'Balsamiq Sans', cursive;
+  /* font-weight: 400; */
+  letter-spacing: 0.5px;
+  font-size: 70px;
+  color: #2D268E;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+button.outline {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  color: #2D268E;
+  font-size: 30px;
+  border-color: #2D268E;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 22px;
+  padding: 15px 120px;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+button.outline a {
+  text-decoration: none;
+}
+button.outline:hover {
+  color: white;
+  background: #2D268E;
+  border-color: white;
+  transition: all 0.2s linear;
+}
+button.outline:active {
+  border-radius: 22px;
+}
+
