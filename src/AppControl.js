@@ -1,6 +1,6 @@
 import React from 'react';
-import CurrentBloodSugar from './CurrentBloodSugar';
-import Dexcom from './Dexcom';
+import CurrentBloodSugar from './components/CurrentBloodSugar';
+import Dexcom from './components/Dexcom';
 
 class AppControl extends React.Component {
 

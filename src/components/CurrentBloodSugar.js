@@ -4,6 +4,7 @@ import Orb from './Orb';
 // import ButtonSymptom from './ButtonSymptom';
 // import ButtonGraph from './ButtonGraph';
 import { Container, Row, Col } from 'react-bootstrap';
+import CircleIconButton from './CircleIconButton';
 
 class CurrentBloodSugar extends React.Component {
   constructor(props) {
@@ -76,16 +77,12 @@ class CurrentBloodSugar extends React.Component {
     return ( 
       <Container>
     <Row>
-      <Col sm={12}>
         <Orb />
         <p class="egvs">{this.state.currentBloodSugar}</p>
-      </Col>
     </Row>
     <Row>
       <React.Fragment> 
-        {/* <ButtonCalibrate />
-        <ButtonSymptom />
-        <ButtonGraph /> */}
+        <CircleIconButton />
       </React.Fragment>
     </Row>
   </Container>
