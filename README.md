@@ -9,7 +9,7 @@ The application displays the user's current blood sugar values and teaches the u
 ## User Stories
 
 * As a child with type 1 diabetes, I want to develop body awareness so I can identify signs of adverse blood sugar changes and be empowered to manage my own blood sugar levels. 
-  - I need a simple and motivating way of identifying and tracking my daily feelings.
+  - I need a simple and motivating way of identifying and tracking my daily feelings and symptoms.
   - I need to be reminded to check in with my body during glucose highs, lows, when I wake up in the morning, when I eat, 2 hours after I eat.
 * As a parent, I want to actively participate in my child’s diabetic experience so I can better validate and motivate their blood sugar management.
 * As a physician, I want to collect realtime patient symptom data that correlates with blood sugar values. This will allow me to make psychosocially informed treatment plans that increase patient compliance.
