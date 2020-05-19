@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import drop from './img/drop.svg'
+import drop from './../img/drop.svg'
 
 function Drop(props) {
   return ( 

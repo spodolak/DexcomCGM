@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import icon from './img/mood.png'
+import icon from './../img/mood.png'
 
 function AddSymptom(props) {
   return ( 

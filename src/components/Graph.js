@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import graph from './img/graph.png'
+import graph from './../img/graph.png'
 
 function Graph(props) {
   return ( 
