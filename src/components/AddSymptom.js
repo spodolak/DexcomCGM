@@ -5,7 +5,7 @@ import icon from './../img/mood.png'
 function AddSymptom(props) {
   return ( 
   <React.Fragment>     
-    <div class="icon">
+    <div class="icon" onClick={()=> props.onSwitchingViews('')}>
       <img src={icon} width = "60px" alt="icon"/>
       <button class="outline">
         Done
@@ -15,7 +15,7 @@ function AddSymptom(props) {
   )}
 
 AddSymptom.propTypes = {
-  onClickingLogIn: PropTypes.func
+  onSwitchingViews : PropTypes.func
 }
 
 

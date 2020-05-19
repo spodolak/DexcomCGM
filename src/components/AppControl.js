@@ -75,29 +75,28 @@ class AppControl extends React.Component {
   }
   
   handleSwitchingViews = (view) => {
-    if (view === 'calibrate') {
-      return <Calibrate />
-    } else if (view === 'add_symptom') {
-      return <AddSymptom />
-    } else if (view === 'graph') {
-      return <Graph />
-    } else {
-      return <CurrentBloodSugar value = {this.state.currentBloodSugar} />
-    }
+    this.setState({currentView : view});
   }
 
   render() {
-
-    let currentlyVisibleState = null 
-
+    let currentlyVisibleState = null;
     if ( this.state.bloodSugarValues != null) {
-      currentlyVisibleState = <CurrentBloodSugar value = {this.state.currentBloodSugar} onSwitchingViews = {handleSwitchingViews} />;
-
+      switch(this.state.currentView) {
+        case 'calibrate':
+          currentlyVisibleState = <Calibrate onSwitchingViews = {this.handleSwitchingViews}/>
+          break;
+        case 'add_symptom':
+          currentlyVisibleState = <AddSymptom onSwitchingViews = {this.handleSwitchingViews} />
+          break;
+        case 'graph':
+          currentlyVisibleState = <Graph onSwitchingViews = {this.handleSwitchingViews}/>
+          break;
+        default: 
+          currentlyVisibleState = <CurrentBloodSugar value = {this.state.currentBloodSugar} onSwitchingViews = {this.handleSwitchingViews} />
+      }
     } else {
       currentlyVisibleState = <h2>Please log into dexcom!</h2>
-    }
-
-    
+    }   
     return (
       <React.Fragment>
         {currentlyVisibleState}

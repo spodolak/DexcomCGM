@@ -7,21 +7,21 @@ import graph from './../img/graph.png'
 function CircleIconButton(props) {
   return ( 
   <React.Fragment> 
-    <button class="round">
+    <button class="round" onClick={()=> props.onSwitchingViews('calibrate')}>
       <img src={drop} width = "60px" alt="icon"/>
     </button>
-    <button class="round">
+    <button class="round" onClick={()=> props.onSwitchingViews('add_symptom')}>
       <img src={icon} width = "90px" alt="icon"/>
     </button>
 
-    <button class="round">
+    <button class="round" onClick={()=> props.onSwitchingViews('graph')}>
       <img src={graph} width = "60px" alt="icon"/>
     </button>
   </React.Fragment>
   )}
 
 CircleIconButton.propTypes = {
-  onClickingLogIn: PropTypes.func
+  onSwitchingViews : PropTypes.func
 }
 
 

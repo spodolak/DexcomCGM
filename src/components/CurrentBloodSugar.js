@@ -14,7 +14,7 @@ function CurrentBloodSugar(props) {
         </Row>
         <Row>
           <React.Fragment> 
-            <CircleIconButton />
+            <CircleIconButton onSwitchingViews = {props.onSwitchingViews}/>
           </React.Fragment>
         </Row>
       </Container>
@@ -22,7 +22,8 @@ function CurrentBloodSugar(props) {
   )}
 
 CurrentBloodSugar.propTypes = {
-  value : Number
+  value : PropTypes.number,
+  onSwitchingViews : PropTypes.func
 }
 
 

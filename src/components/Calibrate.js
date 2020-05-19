@@ -5,7 +5,7 @@ import drop from './../img/drop.svg'
 function Drop(props) {
   return ( 
   <React.Fragment>     
-    <div class="drop">
+    <div class="drop" onClick={()=> props.onSwitchingViews('')}>
       <img src={drop} width = "60px" alt="icon"/>
       <button class="outline">
         Done
@@ -15,7 +15,7 @@ function Drop(props) {
   )}
 
 Drop.propTypes = {
-  onClickingLogIn: PropTypes.func
+  onSwitchingViews : PropTypes.func
 }
 
 
