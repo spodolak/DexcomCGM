@@ -15,9 +15,6 @@ function Dexcom(props) {
         rel="noopener noreferrer"
         onClick={()=> props.onClickingLogIn}
       >
-      {/* <button class="btn button-outline button-login">
-        Log In
-      </button> */}
       <button class="outline">
         Log In
       </button>
