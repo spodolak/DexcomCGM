@@ -1,5 +1,8 @@
 import React from 'react';
-import CurrentBloodSugar from './CurrentBloodSugar'
+import CurrentBloodSugar from './CurrentBloodSugar';
+import Calibrate from './Calibrate';
+import AddSymptom from './AddSymptom';
+import Graph from './Graph';
 
 class AppControl extends React.Component {
   constructor(props) {
@@ -9,7 +12,8 @@ class AppControl extends React.Component {
       isLoaded: false,
       bearerToken: '',
       currentBloodSugar: null,
-      bloodSugarValues: null
+      bloodSugarValues: null,
+      currentView : null
     };
   }
 
@@ -69,15 +73,30 @@ class AppControl extends React.Component {
       this.getBloodSugars(this.state.bearerToken);
     }
   }
-    
+  
+  handleSwitchingViews = (view) => {
+    if (view === 'calibrate') {
+      return <Calibrate />
+    } else if (view === 'add_symptom') {
+      return <AddSymptom />
+    } else if (view === 'graph') {
+      return <Graph />
+    } else {
+      return <CurrentBloodSugar value = {this.state.currentBloodSugar} />
+    }
+  }
+
   render() {
 
     let currentlyVisibleState = null 
 
     if ( this.state.bloodSugarValues != null) {
-      currentlyVisibleState = <CurrentBloodSugar value = {this.state.currentBloodSugar} />;
+      currentlyVisibleState = <CurrentBloodSugar value = {this.state.currentBloodSugar} onSwitchingViews = {handleSwitchingViews} />;
 
+    } else {
+      currentlyVisibleState = <h2>Please log into dexcom!</h2>
     }
+
     
     return (
       <React.Fragment>
