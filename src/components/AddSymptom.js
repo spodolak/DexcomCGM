@@ -5,9 +5,11 @@ import icon from './../img/mood.png'
 function AddSymptom(props) {
   return ( 
   <React.Fragment>     
-    <div class="icon" onClick={()=> props.onSwitchingViews('')}>
+    <div class="icon" >
       <img src={icon} width = "60px" alt="icon"/>
-      <button class="outline">
+    </div>
+    <div>
+      <button class="outline" onClick={()=> props.onSwitchingViews('')}>
         Done
       </button>
     </div>

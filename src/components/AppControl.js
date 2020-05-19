@@ -3,6 +3,7 @@ import CurrentBloodSugar from './CurrentBloodSugar';
 import Calibrate from './Calibrate';
 import AddSymptom from './AddSymptom';
 import Graph from './Graph';
+import { Container } from 'react-bootstrap';
 
 class AppControl extends React.Component {
   constructor(props) {
@@ -80,6 +81,7 @@ class AppControl extends React.Component {
 
   render() {
     let currentlyVisibleState = null;
+    // currentlyVisibleState = <CurrentBloodSugar value = {this.state.currentBloodSugar} onSwitchingViews = {this.handleSwitchingViews} />
     if ( this.state.bloodSugarValues != null) {
       switch(this.state.currentView) {
         case 'calibrate':
@@ -99,7 +101,9 @@ class AppControl extends React.Component {
     }   
     return (
       <React.Fragment>
-        {currentlyVisibleState}
+        <Container fluid>
+          {currentlyVisibleState}
+        </Container>
       </React.Fragment>
     );
   }

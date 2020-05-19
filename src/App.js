@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Container } from 'react-bootstrap';
 import './App.css';
 import DexcomControl from './DexcomControl';
 

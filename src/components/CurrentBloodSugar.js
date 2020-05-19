@@ -7,17 +7,11 @@ import { Container, Row, Col } from 'react-bootstrap';
 function CurrentBloodSugar(props) {
   return ( 
   <React.Fragment> 
-      <Container>
-        <Row>
-            <Orb />
-            <p class="egvs">{props.value}</p>
-        </Row>
-        <Row>
-          <React.Fragment> 
-            <CircleIconButton onSwitchingViews = {props.onSwitchingViews}/>
-          </React.Fragment>
-        </Row>
-      </Container>
+    <Row className="justify-content-center">
+      <Orb />
+      <p class="egvs">{props.value}</p>
+    </Row >
+      <CircleIconButton onSwitchingViews = {props.onSwitchingViews}/>
   </React.Fragment>
   )}
 

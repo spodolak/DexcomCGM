@@ -5,9 +5,11 @@ import graph from './../img/graph.png'
 function Graph(props) {
   return ( 
   <React.Fragment>     
-    <div class="graph" onClick={()=> props.onSwitchingViews('')}>
+    <div class="graph">
       <img src={graph} width = "60px" alt="icon"/>
-      <button class="outline">
+    </div>
+    <div>
+      <button class="outline" onClick={()=> props.onSwitchingViews('')}>
         Done
       </button>
     </div>
@@ -17,6 +19,5 @@ function Graph(props) {
 Graph.propTypes = {
   onSwitchingViews : PropTypes.func
 }
-
 
 export default Graph;
