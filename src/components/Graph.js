@@ -1,21 +1,19 @@
-import React, { ReactDOM } from 'react';
+import React from 'react';
 import PropTypes from "prop-types";
 import ReactApexCharts from 'react-apexcharts'
 
 class Graph extends React.Component {	
   constructor(props) {
-    console.log(props.values[0].systemTime);
-    console.log(props.values[0].value);
     super(props);
     this.state = {
       series: [{
         name: 'blood sugar',
-        data: props.values.map(value => { return value.value})
+        data: props.values.map(value => { return value.value} ),
       }],
       options: {
         chart: {
-          height: 350,
-          type: 'area'
+          height: 500,
+          type: 'area',
         },
         dataLabels: {
           enabled: true
@@ -25,30 +23,22 @@ class Graph extends React.Component {
         },
         xaxis: {
           type: 'datetime',
-          categories: props.values.map(value => { return value.displayTime})
+          categories: props.values.map(value => { return value.displayTime} )
         },
         tooltip: {
           x: {
             format: 'dd/MM/yy HH:mm'
           },
         },
+        fill: {
+          colors: ['#7765E3', '#6564DB', '#2D268E']
+        },
+        colors: ['#2D268E']
       },
-      fill: {
-        colors: ['#F44336', '#E91E63', '#9C27B0'],
-        type: "gradient",
-        gradient: {
-          shadeIntensity: 1,
-          opacityFrom: 0.7,
-          opacityTo: 0.9,
-          stops: [0, 90, 100]
-        }
-      }
     };
   }
 
   render() {
-    // console.log(this.props.values[0].systemTime);
-    // console.log(this.props.values[0].value);
     return (
       <React.Fragment>
         <div id="chart">
