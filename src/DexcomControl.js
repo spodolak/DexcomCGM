@@ -18,7 +18,7 @@ class DexcomControl extends React.Component {
   render(){
     let currentlyVisibleState = null;
 
-    if (window.location.search != "") {     
+    if (window.location.search !== "") {     
       currentlyVisibleState = <AppControl />
     } else if (window.location.search === "") {
       let authorizationCode = window.location.search;
