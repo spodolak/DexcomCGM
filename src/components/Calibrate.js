@@ -17,7 +17,7 @@ function Drop(props) {
               3. Promptly enter the exact value from your meter<br></br>
             </Form.Text>
           </Form.Group>
-          <button class="outline" onClick={()=> props.onSwitchingViews('')} type="submit">
+          <button className="outline" onClick={()=> props.onSwitchingViews('')} type="submit">
             Calibrate
           </button>
         </Form>     

@@ -45,7 +45,7 @@ class Graph extends React.Component {
         <ReactApexCharts options={this.state.options} series={this.state.series} type="area" height={350} />
         </div>
         <div>
-          <button class="outline" onClick={()=> this.props.onSwitchingViews('')}>
+          <button className="outline" onClick={()=> this.props.onSwitchingViews('')}>
             Done
           </button>
         </div>

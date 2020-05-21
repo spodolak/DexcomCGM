@@ -11,7 +11,7 @@ function CurrentBloodSugar(props) {
     </Row>
     <Row className="justify-content-center mt-5 mb-5">
         <Orb />
-        <p class="egvs">{props.value}</p>
+        <p className="egvs">{props.value}</p>
     </Row >
       <CircleIconButton onSwitchingViews = {props.onSwitchingViews}/>
   </React.Fragment>
