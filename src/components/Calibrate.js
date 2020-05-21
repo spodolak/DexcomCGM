@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import drop from './../img/drop.svg'
 import { Form, Row, Col, InputGroup } from 'react-bootstrap';
 
 function Drop(props) {
   return ( 
       <React.Fragment>
         <Form>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label><h1>Enter Current Blood Sugar</h1></Form.Label>
+          <Form.Group controlId="calibrate">
+            <Form.Label><h1>Enter Blood Sugar</h1></Form.Label>
             <InputGroup size="lg" >
               <Form.Control classType="text-center" type="calibrate" placeholder="mg/dL" />
             </InputGroup>
