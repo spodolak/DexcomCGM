@@ -15,8 +15,8 @@ function AddSymptom(props) {
               <label class="drinkcard-cc sweaty" for="sweaty"></label>
             </div>
             <div class="cc-selector">
-              <input id="pallor" type="checkbox" name="credit-card" value="pallor" />
-              <label class="drinkcard-cc pallor" for="pallor"></label>
+              <input id="weak" type="checkbox" name="credit-card" value="weak" />
+              <label class="drinkcard-cc weak" for="weak"></label>
             </div>
             <div class="cc-selector">
               <input id="irritable" type="checkbox" name="credit-card" value="irritable" />
@@ -29,8 +29,8 @@ function AddSymptom(props) {
               <label class="drinkcard-cc hungry" for="hungry"></label>
             </div>
             <div class="cc-selector">
-              <input id="uncoordinated" type="checkbox" name="credit-card" value="uncoordinated" />
-              <label class="drinkcard-cc uncoordinated" for="uncoordinated"></label>
+              <input id="dizzy" type="checkbox" name="credit-card" value="dizzy" />
+              <label class="drinkcard-cc dizzy" for="dizzy"></label>
             </div>
             <div class="cc-selector">
               <input id="sleepy" type="checkbox" name="credit-card" value="sleepy" />
