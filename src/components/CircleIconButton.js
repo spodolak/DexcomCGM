@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import icon from './../img/mood.png'
 import drop from './../img/drop.svg'
 import graph from './../img/graph.png'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.css";
 
 function CircleIconButton(props) {
