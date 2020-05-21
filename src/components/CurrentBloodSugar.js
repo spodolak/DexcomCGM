@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from "prop-types";
 import CircleIconButton from "./CircleIconButton";
 import Orb from './Orb';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 function CurrentBloodSugar(props) {
   return ( 
   <React.Fragment> 
-    <Row className="justify-content-center">
-      <Orb />
-      <p class="egvs">{props.value}</p>
+    <Row className="mt-5">
+    </Row>
+    <Row className="justify-content-center mt-5 mb-5">
+        <Orb />
+        <p class="egvs">{props.value}</p>
     </Row >
       <CircleIconButton onSwitchingViews = {props.onSwitchingViews}/>
   </React.Fragment>
