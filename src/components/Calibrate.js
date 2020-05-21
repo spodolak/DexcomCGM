@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import { Form, Row, Col, InputGroup } from 'react-bootstrap';
+import { Form, InputGroup } from 'react-bootstrap';
 
 function Drop(props) {
   return ( 
