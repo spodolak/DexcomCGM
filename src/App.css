@@ -42,7 +42,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgb(236, 236, 236), white, white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
+  background-image: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255), white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
 }
 
 .welcome-page{
@@ -51,8 +51,8 @@ body {
 
 /* ORB STYLING */
 .orb {
-  width: 180px;
-  height: 180px;
+  width: 280px;
+  height:280px;
   -webkit-animation: shapeColorShift 7s infinite;
           animation: shapeColorShift 7s infinite;
   -webkit-filter: blur(12px);
@@ -68,8 +68,8 @@ body {
   display: block;
   position: absolute;
   top: -10px;
-  right: -35px;
-  bottom: -35px;
+  right: -10px;
+  bottom: -10px;
   left: -10px;
   background: inherit;
   -webkit-filter: blur(30px);
@@ -144,9 +144,9 @@ body {
   content: "";
   display: block;
   position: absolute;
-  font-size: 60px;
+  font-size: 70px;
   color: white;
-  top: 31%;
+  top: 36%;
 
 
   /* width: 180px;
@@ -158,10 +158,10 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
 
 h1 {
-  font-family: 'Balsamiq Sans', cursive;
+  /* font-family: 'Balsamiq Sans', cursive; */
   /* font-weight: 400; */
   letter-spacing: 0.5px;
-  font-size: 70px;
+  font-size: 90px;
   color: #2D268E;
 }
 
@@ -179,7 +179,7 @@ button.outline {
   border-style: solid;
   border-width: 2px;
   border-radius: 22px;
-  padding: 15px 120px;
+  padding: 15px 100px;
   text-transform: uppercase;
   transition: all 0.2s linear;
 }
@@ -200,7 +200,7 @@ button.outline:active {
 /* ROUND ICON BUTTON */
 button.round {
   position: relative;
-  z-index: 3;
+  /* z-index: 3; */
   background: transparent;
   color: #2D268E;
   font-size: 30px;
@@ -208,7 +208,7 @@ button.round {
   border-style: solid;
   border-width: 0px;
   border-radius: 50% 50%;
-  padding: 10px 10px;
+  padding: 20px 20px;
   text-transform: uppercase;
   transition: all 0.2s linear;
 }
@@ -226,16 +226,18 @@ button.round:active {
 }
 
 
+
+/* SYMPTOM BUTTONS */
 .sweaty {
   background-image: url(./img/mood.png);
 }
 input#sweaty {
   display: none;
 }
-.pallor {
+.weak {
   background-image: url(./img/mood.png);
 }
-input#pallor {
+input#weak {
   display: none;
 }
 .irritable {
@@ -256,10 +258,10 @@ input#sleepy {
 input#hungry {
   display: none;
 }
-.uncoordinated {
+.dizzy {
   background-image: url(./img/mood.png);
 }
-input#uncoordinated {
+input#dizzy {
   display: none;
 }
 
@@ -271,12 +273,49 @@ input#uncoordinated {
 }
 
 .cc-selector input:active +.drinkcard-cc{opacity: .9;}
-.cc-selector input:checked +.drinkcard-cc{
-  background-image: url(./img/sleepy-text.png);
+.cc-selector input#sweaty:checked +.drinkcard-cc{
+  background-image: url(./img/sweaty-text.png);
+  transition: all 0.4s linear;
   -webkit-filter: none;
      -moz-filter: none;
           filter: none;
 }
+.cc-selector input#weak:checked +.drinkcard-cc{
+  background-image: url(./img/weak-text.png);
+  transition: all 0.4s linear;
+  -webkit-filter: none;
+     -moz-filter: none;
+          filter: none;
+}
+.cc-selector input#irritable:checked +.drinkcard-cc{
+  background-image: url(./img/irritable-text.png);
+  transition: all 0.4s linear;
+  -webkit-filter: none;
+     -moz-filter: none;
+          filter: none;
+}
+.cc-selector input#hungry:checked +.drinkcard-cc{
+  background-image: url(./img/hungry-text.png);
+  transition: all 0.4s linear;
+  -webkit-filter: none;
+     -moz-filter: none;
+          filter: none;
+}
+.cc-selector input#dizzy:checked +.drinkcard-cc{
+  background-image: url(./img/dizzy-text.png);
+  transition: all 0.4s linear;
+  -webkit-filter: none;
+     -moz-filter: none;
+          filter: none;
+}
+.cc-selector input#sleepy:checked +.drinkcard-cc{
+  background-image: url(./img/sleepy-text.png);
+  transition: all 0.4s linear;
+  -webkit-filter: none;
+     -moz-filter: none;
+          filter: none;
+}
+
 .drinkcard-cc{
   cursor:pointer;
   background-size:contain;
@@ -286,14 +325,41 @@ input#uncoordinated {
   -webkit-transition: all 100ms ease-in;
      -moz-transition: all 100ms ease-in;
           transition: all 100ms ease-in;
-  /* -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-     -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-          filter: brightness(1.8) grayscale(1) opacity(.7); */
 }
-.drinkcard-cc:hover{
+
+.drinkcard-cc.sweaty:hover{
+  background-image: url(./img/sweaty-text.png);
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+          filter: brightness(1.2) grayscale(.5) opacity(.9);     
+}
+.drinkcard-cc.weak:hover{
+  background-image: url(./img/weak-text.png);
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+          filter: brightness(1.2) grayscale(.5) opacity(.9);     
+}
+.drinkcard-cc.irritable:hover{
+  background-image: url(./img/irritable-text.png);
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+          filter: brightness(1.2) grayscale(.5) opacity(.9);     
+}
+.drinkcard-cc.hungry:hover{
+  background-image: url(./img/hungry-text.png);
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+          filter: brightness(1.2) grayscale(.5) opacity(.9);     
+}
+.drinkcard-cc.dizzy:hover{
+  background-image: url(./img/dizzy-text.png);
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+          filter: brightness(1.2) grayscale(.5) opacity(.9);     
+}
+.drinkcard-cc.sleepy:hover{
   background-image: url(./img/sleepy-text.png);
   -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
      -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-          filter: brightness(1.2) grayscale(.5) opacity(.9);
-          
+          filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
