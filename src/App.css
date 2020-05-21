@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
 /* REACT APP STYLING */
 .App {
   text-align: center;
+  font-family: 'Lilita One', cursive;
 }
 
 .App-logo {
@@ -155,7 +158,6 @@ body {
 }
 
 /* SQUARE TEXT BUTTON */
-@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
 
 h1 {
   /* font-family: 'Balsamiq Sans', cursive; */
