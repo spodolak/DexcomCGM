@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import icon from './../img/mood.png';
-import { Form, Row, Col, InputGroup } from 'react-bootstrap';
+import { Form, Row } from 'react-bootstrap';
 
 function AddSymptom(props) {
   return ( 
