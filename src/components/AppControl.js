@@ -40,7 +40,6 @@ class AppControl extends React.Component {
       .then(response => response.json())
       .then((response) => {
         this.setState({bearerToken: response.access_token});
-        console.log("bearerToken", response);
         this.getBloodSugars(this.state.bearerToken); 
         })
       .then(() => { this.getBloodSugars(this.state.bearerToken); })
@@ -61,8 +60,8 @@ class AppControl extends React.Component {
     .then(response => response.json())
     .then((response) => {
       this.setState({bloodSugarValues: response.egvs});
-      this.setState({currentBloodSugar: response.egvs[200].realtimeValue});
-      console.log("EGV", response.egvs)}) 
+      this.setState({currentBloodSugar: response.egvs[0].realtimeValue});
+      }) 
     .catch(error => console.log('error', error));
   }
 
@@ -81,7 +80,6 @@ class AppControl extends React.Component {
 
   render() {
     let currentlyVisibleState = null;
-    // currentlyVisibleState = <CurrentBloodSugar value = {this.state.currentBloodSugar} onSwitchingViews = {this.handleSwitchingViews} />
     if ( this.state.bloodSugarValues != null) {
       switch(this.state.currentView) {
         case 'calibrate':
@@ -91,7 +89,7 @@ class AppControl extends React.Component {
           currentlyVisibleState = <AddSymptom onSwitchingViews = {this.handleSwitchingViews} />
           break;
         case 'graph':
-          currentlyVisibleState = <Graph onSwitchingViews = {this.handleSwitchingViews}/>
+          currentlyVisibleState = <Graph values = {this.state.bloodSugarValues} onSwitchingViews = {this.handleSwitchingViews}/>
           break;
         default: 
           currentlyVisibleState = <CurrentBloodSugar value = {this.state.currentBloodSugar} onSwitchingViews = {this.handleSwitchingViews} />
