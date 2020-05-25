@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return ( 
   <React.Fragment>     
-    <p>Copywrite Steph 2020</p>
+    <p id="footer">© 2020 Steph Podolak</p>
   </React.Fragment>
   )
 }
