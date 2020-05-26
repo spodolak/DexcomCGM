@@ -12,7 +12,7 @@ class AppControl extends React.Component {
       error: null,
       isLoaded: false,
       bearerToken: '',
-      currentBloodSugar: null,
+      currentBloodSugar: 48,
       bloodSugarValues: null,
       currentView : null
     };
@@ -56,7 +56,7 @@ class AppControl extends React.Component {
       headers: myHeaders,
       redirect: 'follow'
     };
-    fetch("https://api.dexcom.com/v2/users/self/egvs?startDate=2020-02-16T15:30:00&endDate=2020-02-17T15:45:00", requestOptions)
+    fetch("https://api.dexcom.com/v2/users/self/egvs?startDate=2020-05-24T00:00:00&endDate=2020-05-24T23:59:00", requestOptions)
     .then(response => response.json())
     .then((response) => {
       this.setState({bloodSugarValues: response.egvs});
@@ -78,12 +78,16 @@ class AppControl extends React.Component {
     this.setState({currentView : view});
   }
 
+  handleCalibrate = (e) => {
+    this.setState({ currentBloodSugar: e.target.value })
+  }
+
   render() {
     let currentlyVisibleState = null;
     if ( this.state.bloodSugarValues != null) {
       switch(this.state.currentView) {
         case 'calibrate':
-          currentlyVisibleState = <Calibrate onSwitchingViews = {this.handleSwitchingViews}/>
+          currentlyVisibleState = <Calibrate onCalibrate = {this.handleCalibrate}onSwitchingViews = {this.handleSwitchingViews}/>
           break;
         case 'add_symptom':
           currentlyVisibleState = <AddSymptom onSwitchingViews = {this.handleSwitchingViews} />
@@ -101,6 +105,9 @@ class AppControl extends React.Component {
       <React.Fragment>
         <Container fluid>
           {currentlyVisibleState}
+          {/* <CurrentBloodSugar 
+            value = {this.state.currentBloodSugar} 
+            onSwitchingViews = {this.handleSwitchingViews} /> */}
         </Container>
       </React.Fragment>
     );
