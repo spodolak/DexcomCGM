@@ -9,7 +9,12 @@ function Drop(props) {
           <Form.Group controlId="calibrate">
             <Form.Label><h1>Enter Blood Sugar</h1></Form.Label>
             <InputGroup size="lg" >
-              <Form.Control classType="text-center" type="calibrate" placeholder="mg/dL" />
+              <Form.Control 
+                classType="text-center" 
+                type="calibrate" 
+                placeholder="mg/dL"
+                onChange={props.onCalibrate}
+              />
             </InputGroup>
             <Form.Text className="text-muted">
               1. Wash and dry your hands <br></br>
@@ -25,7 +30,8 @@ function Drop(props) {
   )}
 
 Drop.propTypes = {
-  onSwitchingViews : PropTypes.func
+  onSwitchingViews : PropTypes.func,
+  onCalibrate : PropTypes.func
 }
 
 
