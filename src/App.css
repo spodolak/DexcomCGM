@@ -72,7 +72,7 @@ body {
   background-size: 500% 800%;
 }
 .orb:before {
-  z-index: -200;
+  z-index: -1;
   content: "";
   display: block;
   position: absolute;
@@ -148,14 +148,15 @@ body {
 
 
 /* BLOOD SUGAR DISPLAY STYLING */
-.egvs {
+.egv {
   z-index: 0;
   content: "";
   display: block;
   position: absolute;
   font-size: 70px;
   color: white;
-  top: 36%;
+  margin-top: -195px;
+  margin-left: 90px;
 }
 
 /* TEXT BUTTON */
@@ -179,7 +180,6 @@ button.outline {
   border-color: #2D268E;
   border-style: solid;
   border-width: 2px;
-  /* border-radius: 22px; */
   border-radius: 50px;
   padding: 10px 80px;
   text-transform: uppercase;
@@ -202,7 +202,6 @@ button.outline:active {
 /* ROUND IMAGE BUTTON */
 button.round {
   position: relative;
-  /* z-index: 3; */
   background: transparent;
   color: #2D268E;
   font-size: 30px;
