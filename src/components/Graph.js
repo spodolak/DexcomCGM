@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import ReactApexCharts from 'react-apexcharts'
+import ReactApexCharts from 'react-apexcharts';
+import { Row } from 'react-bootstrap';
 
 class Graph extends React.Component {	
   constructor(props) {
@@ -41,9 +42,9 @@ class Graph extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div id="chart">
-        <ReactApexCharts options={this.state.options} series={this.state.series} type="area" height={350} />
-        </div>
+        <Row className="justify-content-center mr-3" id="chart">
+          <ReactApexCharts options={this.state.options} series={this.state.series} type="area" height={350} />
+        </Row>
         <div>
           <button className="outline" onClick={()=> this.props.onSwitchingViews('')}>
             Done
