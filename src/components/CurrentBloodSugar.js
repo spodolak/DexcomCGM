@@ -11,7 +11,7 @@ function CurrentBloodSugar(props) {
     </Row>
     <Row className="justify-content-center mt-5 mb-5">
       <div>
-        <Orb />
+        <Orb egv={props.value}/>
         <p className="egv">{props.value}</p>
       </div>
     </Row >
