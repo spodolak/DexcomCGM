@@ -14,20 +14,24 @@ The application displays the user's current blood sugar values and teaches the u
 * As a parent, I want to actively participate in my child’s diabetic experience so I can better validate and motivate their blood sugar management.
 * As a physician, I want to collect realtime patient symptom data that correlates with blood sugar values. This will allow me to make psychosocially informed treatment plans that increase patient compliance.
 
+## Current Prototype
+![Wireframe](src/img/current-prototype.png)
+
 ## Component Tree
 ![Components](src/img/components.jpg)
 
-<!-- ## Wireframe
-![Wireframe](src/img/wireframe.jpg) -->
 
 ## Technologies Used
 
+* React
 * Node.js
 * Webpack
 * npm
 * Javascript
 * jQuery
-* React
+* React-Bootstrap
+* Google Fonts
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
