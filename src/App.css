@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
 
 /* REACT APP STYLING */
 .App {
   text-align: center;
-  font-family: 'Lilita One', cursive;
+  font-family: 'Raleway', sans-serif;
 }
 
 .App-logo {
@@ -48,42 +50,112 @@ body {
   background-image: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255), white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
 }
 
+h1 {
+  letter-spacing: 0.5px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 70px;
+  color: #2D268E;
+}
+
+.update{
+  font-size: 35px;  
+}
+
 .welcome-page{
   margin-top: -20%;
+  letter-spacing: 0.5px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 65px;
+  color: #2D268E;
 }
 
 #footer{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 15px;
   padding: 10px;
 }
 
 /* ORB STYLING */
-.orb {
-  width: 280px;
-  height:280px;
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.orb-normal {
+  width: 250px;
+  height: 250px;
   -webkit-animation: shapeColorShift 7s infinite;
           animation: shapeColorShift 7s infinite;
   -webkit-filter: blur(12px);
           filter: blur(12px);
-  background: linear-gradient(-45deg, #7765E3
-  , #6564DB
-  , #2D268E, #0086ff, #27b2ff, #C6C013, #FF6868 , #08aeea);
+  background: linear-gradient(-45deg, #08AEEA, #2AF598, #2AF598, #F72585, #27b2ff, #ffffff, #000000, #FFBD00);
   background-size: 500% 800%;
 }
-.orb:before {
-  z-index: -1;
-  content: "";
+.orb-normal:before {
+  content: '';
   display: block;
   position: absolute;
   top: -10px;
-  right: -10px;
-  bottom: -10px;
+  right: -35px;
+  bottom: -35px;
   left: -10px;
   background: inherit;
   -webkit-filter: blur(30px);
           filter: blur(30px);
-  opacity: 0.6;
+  opacity: .6;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+}
+
+.orb-low {
+  width: 250px;
+  height: 250px;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+  -webkit-filter: blur(12px);
+          filter: blur(12px);
+  background: linear-gradient(-45deg, #08AEEA, #2D268E , #0D0221, #0086ff, #27b2ff, rgb(234, 251, 253), #0E0E52, #449DD1);
+  background-size: 500% 800%;
+}
+.orb-low:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: -35px;
+  bottom: -35px;
+  left: -10px;
+  background: inherit;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: .6;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+}
+
+.orb-high {
+  width: 250px;
+  height: 250px;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+  -webkit-filter: blur(12px);
+          filter: blur(12px);
+  background: linear-gradient(-45deg, #F35B04, #F18701, #F7B801, #C42021, #610345, #ffffff, #FF1B1C, #95190C);
+  background-size: 500% 800%;
+}
+.orb-high:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: -35px;
+  bottom: -35px;
+  left: -10px;
+  background: inherit;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: .6;
   -webkit-animation: shapeColorShift 7s infinite;
           animation: shapeColorShift 7s infinite;
 }
@@ -149,29 +221,26 @@ body {
 
 /* BLOOD SUGAR DISPLAY STYLING */
 .egv {
+  font-family: 'Permanent Marker', cursive;
   z-index: 0;
   content: "";
   display: block;
   position: absolute;
   font-size: 70px;
   color: white;
-  margin-top: -195px;
-  margin-left: 90px;
+  margin-top: -185px;
+  margin-left: 73px;
 }
 
 /* TEXT BUTTON */
 
-h1 {
-  letter-spacing: 0.5px;
-  font-size: 90px;
-  color: #2D268E;
-}
 
 button {
   cursor: pointer;
   outline: none;
 }
 button.outline {
+  font-family: 'Raleway', sans-serif;
   position: relative;
   z-index: 3;
   background: transparent;
@@ -226,7 +295,25 @@ button.round:active {
   border-radius: 50%;
 }
 
+#drop {
+  position: relative;
+  margin-top: 35px;
+}
 
+#icon {
+  position: relative;
+  right: 2%;
+}
+
+#graph {
+  position: relative;
+  margin-top: 35px;
+  margin-right: 6%;
+}
+
+#icon-buttons {
+  position: relative;
+}
 
 /* SYMPTOM BUTTONS */
 .sweaty {
