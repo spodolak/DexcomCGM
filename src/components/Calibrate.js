@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Form, InputGroup } from 'react-bootstrap';
 
-function Drop(props) {
+function Calibrate(props) {
   return ( 
       <React.Fragment>
         <Form>
           <Form.Group controlId="calibrate">
-            <Form.Label><h1>Enter Blood Sugar</h1></Form.Label>
+            <Form.Label></Form.Label>
+            <h1 class="update">Update Blood Sugar</h1>
+            <br></br>
             <InputGroup size="lg" >
               <Form.Control 
                 classType="text-center" 
@@ -29,10 +31,10 @@ function Drop(props) {
   </React.Fragment>
   )}
 
-Drop.propTypes = {
+Calibrate.propTypes = {
   onSwitchingViews : PropTypes.func,
   onCalibrate : PropTypes.func
 }
 
 
-export default Drop;
+export default Calibrate;
