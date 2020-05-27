@@ -2,6 +2,7 @@ import React from 'react';
 import CurrentBloodSugar from './CurrentBloodSugar';
 import Calibrate from './Calibrate';
 import AddSymptom from './AddSymptom';
+import DexcomError from './DexcomError';
 import Graph from './Graph';
 import { Container } from 'react-bootstrap';
 
@@ -12,7 +13,7 @@ class AppControl extends React.Component {
       error: null,
       isLoaded: false,
       bearerToken: '',
-      currentBloodSugar: 48,
+      currentBloodSugar: 140,
       bloodSugarValues: null,
       currentView : null
     };
@@ -56,7 +57,7 @@ class AppControl extends React.Component {
       headers: myHeaders,
       redirect: 'follow'
     };
-    fetch("https://api.dexcom.com/v2/users/self/egvs?startDate=2020-05-24T00:00:00&endDate=2020-05-24T23:59:00", requestOptions)
+    fetch("https://api.dexcom.com/v2/users/self/egvs?startDate=2020-05-26T00:00:00&endDate=2020-05-26T23:59:00", requestOptions)
     .then(response => response.json())
     .then((response) => {
       this.setState({bloodSugarValues: response.egvs});
@@ -79,7 +80,7 @@ class AppControl extends React.Component {
   }
 
   handleCalibrate = (e) => {
-    this.setState({ currentBloodSugar: e.target.value })
+    this.setState({ currentBloodSugar: parseInt(e.target.value) })
   }
 
   render() {
@@ -99,15 +100,13 @@ class AppControl extends React.Component {
           currentlyVisibleState = <CurrentBloodSugar value = {this.state.currentBloodSugar} onSwitchingViews = {this.handleSwitchingViews} />
       }
     } else {
-      currentlyVisibleState = <h2>Please log into dexcom!</h2>
+      currentlyVisibleState = <DexcomError />
+      
     }   
     return (
       <React.Fragment>
         <Container fluid>
           {currentlyVisibleState}
-          {/* <CurrentBloodSugar 
-            value = {this.state.currentBloodSugar} 
-            onSwitchingViews = {this.handleSwitchingViews} /> */}
         </Container>
       </React.Fragment>
     );
