@@ -42,6 +42,7 @@ class Graph extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <br></br><h1>Great day!</h1><br></br>
         <Row className="justify-content-center mr-3" id="chart">
           <ReactApexCharts options={this.state.options} series={this.state.series} type="area" height={350} />
         </Row>
