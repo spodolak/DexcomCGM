@@ -37,7 +37,8 @@ class AppControl extends React.Component {
       redirect: 'follow'
     };
     
-    fetch("https://api.dexcom.com/v2/oauth2/token", requestOptions)
+    fetch("https://sandbox-api.dexcom.com/v2/oauth2/token", requestOptions) //Sandbox data URL
+    // fetch("https://api.dexcom.com/v2/oauth2/token", requestOptions) //Dexcom user URL
       .then(response => response.json())
       .then((response) => {
         this.setState({bearerToken: response.access_token});
@@ -57,7 +58,8 @@ class AppControl extends React.Component {
       headers: myHeaders,
       redirect: 'follow'
     };
-    fetch("https://api.dexcom.com/v2/users/self/egvs?startDate=2020-05-26T00:00:00&endDate=2020-05-26T23:59:00", requestOptions)
+    fetch("https://sandbox-api.dexcom.com/v2/users/self/egvs?startDate=2020-05-26T00:00:00&endDate=2020-05-26T23:59:00", requestOptions) //Sandbox data URL
+    // fetch("https://api.dexcom.com/v2/users/self/egvs?startDate=2020-05-26T00:00:00&endDate=2020-05-26T23:59:00", requestOptions) //Dexcom user URL
     .then(response => response.json())
     .then((response) => {
       this.setState({bloodSugarValues: response.egvs});
