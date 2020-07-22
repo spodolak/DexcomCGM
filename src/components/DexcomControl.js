@@ -28,7 +28,9 @@ class DexcomControl extends React.Component {
     
     return (
       <React.Fragment>
-        {currentlyVisibleState}
+        <div>
+            {currentlyVisibleState}
+        </div>
       </React.Fragment>
     );
   }

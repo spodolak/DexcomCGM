@@ -2,28 +2,41 @@ import React from 'react';
 import PropTypes from "prop-types";
 import CircleIconButton from "./CircleIconButton";
 import Orb from './Orb';
-import { Row } from 'react-bootstrap';
+import { Grid } from '@material-ui/core';
+import { Box } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-function CurrentBloodSugar(props) {
-  return ( 
-  <React.Fragment> 
-    <Row className="mt-5">
-    </Row>
-    <Row className="justify-content-center mt-5 mb-5">
-      <div>
-        <Orb egv={props.value}/>
-        <p className="egv">{props.value}</p>
-      </div>
-    </Row >
-      <CircleIconButton onSwitchingViews = {props.onSwitchingViews}/>
-  </React.Fragment>
-  )}
+const useStyles = makeStyles({
+  root: {
+    width: '100%',
+  },
+  center: {
+    margin: 'auto'
+},
+});
 
-CurrentBloodSugar.propTypes = {
-  value : PropTypes.number,
-  onSwitchingViews : PropTypes.func
+
+export default function CurrentBloodSugar(props) {
+    const classes = useStyles();
+    return (
+        <React.Fragment>
+            <div className={classes.root}>
+                <Grid container >
+                    <Grid item xs={12}> 
+                        <Orb egv={props.value} />
+                        <p className="egv">{props.value}</p>
+                    </Grid>
+                    <Grid item xs={12}> 
+                        <CircleIconButton onSwitchingViews={props.onSwitchingViews} />
+                    </Grid>
+                </Grid>
+            </div>
+        </React.Fragment>
+    )
 }
 
-
-export default CurrentBloodSugar;
+CurrentBloodSugar.propTypes = {
+    value: PropTypes.number,
+    onSwitchingViews: PropTypes.func
+}
 

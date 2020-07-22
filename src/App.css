@@ -4,50 +4,27 @@
 
 /* REACT APP STYLING */
 .App {
+  position: absolute;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-image: linear-gradient(rgb(236, 236, 236), white, white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #0C120C;
-}
-
-.App-link {
-  color: #0C120C;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  top: 30%;
+  bottom: 50%;
+  width: 100%;
 }
 
 html,
+
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255), white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
+  background-image: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255),  white, white, white, white, white,white, rgb(255, 255, 255), rgb(236, 236, 236) );
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 h1 {
@@ -57,30 +34,20 @@ h1 {
   color: #2D268E;
 }
 
-.update{
-  font-size: 35px;  
-}
-
-.welcome-page{
-  margin-top: -20%;
-  letter-spacing: 0.5px;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 65px;
-  color: #2D268E;
-}
-
 #footer{
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
   padding: 10px;
 }
 
-/* ORB STYLING */
-html,
-body {
-  margin: 0;
-  padding: 0;
+.footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 0px;
 }
+
+/* ORB STYLING */
 
 .orb-normal {
   width: 250px;
@@ -93,14 +60,14 @@ body {
   background-size: 500% 800%;
 }
 .orb-normal:before {
-  content: '';
+  /* content: ''; */
   display: block;
   position: absolute;
-  top: -10px;
+  /* top: -10px;
   right: -35px;
   bottom: -35px;
-  left: -10px;
-  background: inherit;
+  left: -10px; */
+  /* background: inherit; */
   -webkit-filter: blur(30px);
           filter: blur(30px);
   opacity: .6;
@@ -120,12 +87,12 @@ body {
 }
 .orb-low:before {
   content: '';
-  display: block;
+  /* display: block;
   position: absolute;
   top: -10px;
   right: -35px;
   bottom: -35px;
-  left: -10px;
+  left: -10px; */
   background: inherit;
   -webkit-filter: blur(30px);
           filter: blur(30px);
@@ -146,12 +113,12 @@ body {
 }
 .orb-high:before {
   content: '';
-  display: block;
-  position: absolute;
+  /* display: block; */
+  /* position: absolute;
   top: -10px;
   right: -35px;
   bottom: -35px;
-  left: -10px;
+  left: -10px; */
   background: inherit;
   -webkit-filter: blur(30px);
           filter: blur(30px);
@@ -199,25 +166,6 @@ body {
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  font-family: "Assistant", sans-serif;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
-}
-
 
 /* BLOOD SUGAR DISPLAY STYLING */
 .egv {
@@ -225,11 +173,12 @@ body {
   z-index: 0;
   content: "";
   display: block;
-  position: absolute;
+  /* position: absolute; */
   font-size: 70px;
-  color: white;
-  margin-top: -185px;
-  margin-left: 73px;
+  color: black;
+  margin: auto;
+  /* margin-top: -185px;
+  margin-left: 73px; */
 }
 
 /* TEXT BUTTON */

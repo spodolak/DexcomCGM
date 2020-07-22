@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
 import DexcomControl from './components/DexcomControl';
-import Footer from './components/Footer';
+import FootNavigation from './components/AppFooter.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <DexcomControl />   
-        <Footer />    
-      </header>
-    </div>
-  );
+    return (
+        <React.Fragment>
+            <div className="App">
+                <DexcomControl />   
+            </div>
+            <div className="footer">
+                <FootNavigation />
+            </div>
+        </React.Fragment>
+    );
 }
 
 export default App;
