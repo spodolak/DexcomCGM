@@ -7,10 +7,39 @@
   position: absolute;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  top: 30%;
+  top: 20%;
   bottom: 50%;
   width: 100%;
 }
+
+.App-logo {
+    margin: auto;
+    width: 345px; 
+    height: 340px; 
+    background: linear-gradient(315deg, #ccd45f, #2d268e, #17bb9f, #d0259c);
+    background-size: 800% 800%;
+
+    -webkit-animation: LogoAnimation 19s ease infinite;
+    -moz-animation: LogoAnimation 19s ease infinite;
+    animation: LogoAnimation 19s ease infinite;
+}
+
+@-webkit-keyframes LogoAnimation {
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
+}
+@-moz-keyframes LogoAnimation {
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
+}
+@keyframes LogoAnimation {
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
+}
+
 
 html,
 

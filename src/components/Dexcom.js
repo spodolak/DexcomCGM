@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import Footer from './Footer';
 import { Grid } from '@material-ui/core';
+import logo from './../img/app_logo_invert.png'
 
 const clientId = process.env.REACT_APP_CLIENT_ID;
 
@@ -10,7 +11,9 @@ function Dexcom(props) {
         <React.Fragment>
             <Grid container >
                 <Grid item xs={12}>
-                    <h1 style={{fontSize: "100px"}}>T - 1</h1>
+                    <div className="App-logo">
+                        <img src={logo} width = "350px" alt="icon"/> 
+                    </div>
                 </Grid>
                 <Grid item xs={12}>
                     <h3>Your child's diabetic mood ring</h3><br></br>
