@@ -28,7 +28,7 @@ class AppControl extends React.Component {
         urlencoded.append("client_secret", `${process.env.REACT_APP_CLIENT_SECRET}`);
         urlencoded.append("code", `${window.location.search.slice(6, 38)}`);
         urlencoded.append("grant_type", "authorization_code");
-        urlencoded.append("redirect_uri", "https://spodolak.github.io/DexcomCGM/");
+        urlencoded.append("redirect_uri", "https://spodolak.github.io/DexcomCGM");
 
         var requestOptions = {
             method: 'POST',
