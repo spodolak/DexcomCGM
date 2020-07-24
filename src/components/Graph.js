@@ -11,9 +11,14 @@ class Graph extends React.Component {
         name: 'blood sugar',
         data: props.values.map(value => { return value.value} ),
       }],
+      responsive: [{
+        breakpoint: undefined,
+        options: {},
+      }],
       options: {
         chart: {
           height: 500,
+          width: '100%',
           type: 'area',
         },
         dataLabels: {
@@ -44,7 +49,7 @@ class Graph extends React.Component {
       <React.Fragment>
         <br></br><h1>Great day!</h1><br></br>
         <Row className="justify-content-center mr-3" id="chart">
-          <ReactApexCharts options={this.state.options} series={this.state.series} type="area" height={350} />
+          <ReactApexCharts options={this.state.options} series={this.state.series} type="area" height={350} width={350}/>
         </Row>
         <div>
           <button className="outline" onClick={()=> this.props.onSwitchingViews('')}>

@@ -16,7 +16,7 @@ function Orb(props) {
   } else {
     return ( 
       <React.Fragment>     
-        <div className="orb-normal"></div>
+        <div className="orb"></div>
       </React.Fragment>
     )
   }

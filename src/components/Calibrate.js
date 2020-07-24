@@ -16,6 +16,7 @@ function Calibrate(props) {
                 type="calibrate" 
                 placeholder="mg/dL"
                 onChange={props.onCalibrate}
+                style={{marginLeft: "20%", marginRight: "20%"}}
               />
             </InputGroup>
             <Form.Text className="text-muted">

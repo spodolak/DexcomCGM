@@ -4,50 +4,58 @@
 
 /* REACT APP STYLING */
 .App {
+  position: absolute;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+  top: 20%;
+  bottom: 50%;
+  width: 100%;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    margin: auto;
+    width: 275px; 
+    height: 270px; 
+    background: linear-gradient(315deg, #ccd45f, #2d268e, #17bb9f, #d0259c);
+    background-size: 800% 800%;
+
+    -webkit-animation: LogoAnimation 19s ease infinite;
+    -moz-animation: LogoAnimation 19s ease infinite;
+    animation: LogoAnimation 19s ease infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@-webkit-keyframes LogoAnimation {
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
+}
+@-moz-keyframes LogoAnimation {
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
+}
+@keyframes LogoAnimation {
+    0%{background-position:0% 24%}
+    50%{background-position:100% 77%}
+    100%{background-position:0% 24%}
 }
 
-.App-header {
-  background-image: linear-gradient(rgb(236, 236, 236), white, white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #0C120C;
-}
-
-.App-link {
-  color: #0C120C;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 html,
+
 body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255), white, white, white, white, white, white, white,white,white, rgb(236, 236, 236));
+  background-image: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255),  white, white, white, white, white,white, rgb(255, 255, 255), rgb(236, 236, 236) );
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: flex;
+  /* -webkit-box-pack: center;
+        justify-content: center; */
+  -webkit-box-align: center;
+        align-items: center;
 }
 
 h1 {
@@ -57,94 +65,36 @@ h1 {
   color: #2D268E;
 }
 
-.update{
-  font-size: 35px;  
-}
-
-.welcome-page{
-  margin-top: -20%;
-  letter-spacing: 0.5px;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 65px;
-  color: #2D268E;
-}
-
 #footer{
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
-  padding: 10px;
+  margin-top: 16px;
+  color: white;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 0px;
 }
 
 /* ORB STYLING */
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
 
-.orb-normal {
-  width: 250px;
-  height: 250px;
+.orb {
+  position: relative;
+  width: 240px;
+  height: 240px;
   -webkit-animation: shapeColorShift 7s infinite;
           animation: shapeColorShift 7s infinite;
   -webkit-filter: blur(12px);
           filter: blur(12px);
-  background: linear-gradient(-45deg, #08AEEA, #2AF598, #2AF598, #F72585, #27b2ff, #ffffff, #000000, #FFBD00);
+  background: linear-gradient(-45deg, #08AEEA, #2AF598, #2AF598, #0086ff, #27b2ff, #ffffff, #000000, #08AEEA);
   background-size: 500% 800%;
+  margin: auto;
 }
-.orb-normal:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -10px;
-  right: -35px;
-  bottom: -35px;
-  left: -10px;
-  background: inherit;
-  -webkit-filter: blur(30px);
-          filter: blur(30px);
-  opacity: .6;
-  -webkit-animation: shapeColorShift 7s infinite;
-          animation: shapeColorShift 7s infinite;
-}
-
-.orb-low {
-  width: 250px;
-  height: 250px;
-  -webkit-animation: shapeColorShift 7s infinite;
-          animation: shapeColorShift 7s infinite;
-  -webkit-filter: blur(12px);
-          filter: blur(12px);
-  background: linear-gradient(-45deg, #08AEEA, #2D268E , #0D0221, #0086ff, #27b2ff, rgb(234, 251, 253), #0E0E52, #449DD1);
-  background-size: 500% 800%;
-}
-.orb-low:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -10px;
-  right: -35px;
-  bottom: -35px;
-  left: -10px;
-  background: inherit;
-  -webkit-filter: blur(30px);
-          filter: blur(30px);
-  opacity: .6;
-  -webkit-animation: shapeColorShift 7s infinite;
-          animation: shapeColorShift 7s infinite;
-}
-
-.orb-high {
-  width: 250px;
-  height: 250px;
-  -webkit-animation: shapeColorShift 7s infinite;
-          animation: shapeColorShift 7s infinite;
-  -webkit-filter: blur(12px);
-          filter: blur(12px);
-  background: linear-gradient(-45deg, #F35B04, #F18701, #F7B801, #C42021, #610345, #ffffff, #FF1B1C, #95190C);
-  background-size: 500% 800%;
-}
-.orb-high:before {
+.orb:before {
+  z-index: 1;
   content: '';
   display: block;
   position: absolute;
@@ -199,37 +149,140 @@ body {
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  font-family: "Assistant", sans-serif;
+
+
+.orb-normal {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+  -webkit-filter: blur(12px);
+          filter: blur(12px);
+  background: linear-gradient(-45deg, #08AEEA, #2AF598, #2AF598, #F72585, #27b2ff, #ffffff, #000000, #FFBD00);
+  background-size: 500% 800%;
+  margin: 'auto';
+}
+.orb-normal:before {
+  /* content: ''; */
+  margin: 'auto';
+  display: block;
+  position: absolute;
+  /* top: -10px;
+  right: -35px;
+  bottom: -35px;
+  left: -10px; */
+  /* background: inherit; */
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: .6;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+.orb-low {
+  width: 250px;
+  height: 250px;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+  -webkit-filter: blur(12px);
+          filter: blur(12px);
+  background: linear-gradient(-45deg, #08AEEA, #2D268E , #0D0221, #0086ff, #27b2ff, rgb(234, 251, 253), #0E0E52, #449DD1);
+  background-size: 500% 800%;
+}
+.orb-low:before {
+  content: '';
+  /* display: block;
+  position: absolute;
+  top: -10px;
+  right: -35px;
+  bottom: -35px;
+  left: -10px; */
+  background: inherit;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: .6;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+}
+
+.orb-high {
+  width: 250px;
+  height: 250px;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+  -webkit-filter: blur(12px);
+          filter: blur(12px);
+  background: linear-gradient(-45deg, #F35B04, #F18701, #F7B801, #C42021, #610345, #ffffff, #FF1B1C, #95190C);
+  background-size: 500% 800%;
+}
+.orb-high:before {
+  content: '';
+  /* display: block; */
+  /* position: absolute;
+  top: -10px;
+  right: -35px;
+  bottom: -35px;
+  left: -10px; */
+  background: inherit;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: .6;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+}
+
+@-webkit-keyframes shapeColorShift {
+  0% {
+    border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
+    background-position: 0% 0%;
+  }
+  50% {
+    border-radius: 20vw 40vw 20vw 40vw / 20vw 40vw 20vw 40vw;
+    background-position: 100% 100%;
+  }
+  100% {
+    border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
+    background-position: 0% 0%;
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes shapeColorShift {
+  0% {
+    border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
+    background-position: 0% 0%;
+  }
+  50% {
+    border-radius: 20vw 40vw 20vw 40vw / 20vw 40vw 20vw 40vw;
+    background-position: 100% 100%;
+  }
+  100% {
+    border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
+    background-position: 0% 0%;
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 
 /* BLOOD SUGAR DISPLAY STYLING */
 .egv {
+  position: relative;
   font-family: 'Permanent Marker', cursive;
   z-index: 0;
   content: "";
   display: block;
-  position: absolute;
   font-size: 70px;
   color: white;
-  margin-top: -185px;
-  margin-left: 73px;
+  margin: auto;
+  margin-top: -170px;
 }
 
 /* TEXT BUTTON */
@@ -313,6 +366,9 @@ button.round:active {
 
 #icon-buttons {
   position: relative;
+  margin: auto;
+  margin-top: 140px;
+  margin-left: 40px;
 }
 
 /* SYMPTOM BUTTONS */
