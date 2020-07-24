@@ -68,6 +68,7 @@ class AppControl extends React.Component {
     }
 
     componentDidMount() {
+        this.props.onLogIn()
         if (this.state.bearerToken === '') {
             this.getBearerToken();
         } else {

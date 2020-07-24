@@ -1,6 +1,8 @@
 import React from 'react';
 import AppControl from './AppControl';
 import Dexcom from './Dexcom';
+import FootNavigation from './AppFooter.js';
+import '../App.css';
 
 class DexcomControl extends React.Component {
 
@@ -19,11 +21,11 @@ class DexcomControl extends React.Component {
     let currentlyVisibleState = null;
 
     if (window.location.search !== "") {     
-      currentlyVisibleState = <AppControl />
+      currentlyVisibleState = <AppControl onLogIn={this.handleDexcomLogin} />
     } else if (window.location.search === "") {
       let authorizationCode = window.location.search;
       currentlyVisibleState = 
-      <Dexcom onClickingLogIn = {this.handleDexcomLogin} code = { authorizationCode } />
+      <Dexcom code={ authorizationCode } />
     } 
     
     return (
@@ -31,6 +33,10 @@ class DexcomControl extends React.Component {
         <div>
             {currentlyVisibleState}
         </div>
+        <div >
+            <FootNavigation key={this.state.dexcomLoggedIn} isLoggedIn={this.state.dexcomLoggedIn}/>
+        </div>
+
       </React.Fragment>
     );
   }

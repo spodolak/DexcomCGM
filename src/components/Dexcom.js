@@ -12,11 +12,11 @@ function Dexcom(props) {
             <Grid container >
                 <Grid item xs={12}>
                     <div className="App-logo">
-                        <img src={logo} width = "350px" alt="icon"/> 
+                        <img src={logo} width = "275px" alt="icon"/> 
                     </div>
                 </Grid>
                 <Grid item xs={12}>
-                    <h3>Your child's diabetic mood ring</h3><br></br>
+                    <br></br><h4>Your child's diabetic mood ring</h4><br></br>
                 </Grid>
                 <Grid item xs={12}>
                     <a
@@ -30,9 +30,9 @@ function Dexcom(props) {
                     <button className="outline">Log In</button>
                     </a>
                 </Grid>
-                <Grid item xs={12}>
+                {/* <Grid item xs={12}>
                     <Footer />    
-                </Grid>
+                </Grid> */}
             </Grid>
         </React.Fragment>
     )

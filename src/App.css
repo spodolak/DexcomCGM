@@ -14,8 +14,8 @@
 
 .App-logo {
     margin: auto;
-    width: 345px; 
-    height: 340px; 
+    width: 275px; 
+    height: 270px; 
     background: linear-gradient(315deg, #ccd45f, #2d268e, #17bb9f, #d0259c);
     background-size: 800% 800%;
 
@@ -52,8 +52,10 @@ body {
   overflow: hidden;
   display: -webkit-box;
   display: flex;
+  /* -webkit-box-pack: center;
+        justify-content: center; */
   -webkit-box-align: center;
-          align-items: center;
+        align-items: center;
 }
 
 h1 {
@@ -66,11 +68,12 @@ h1 {
 #footer{
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
-  padding: 10px;
+  margin-top: 16px;
+  color: white;
 }
 
 .footer{
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 100%;
     padding: 0px;
@@ -78,7 +81,78 @@ h1 {
 
 /* ORB STYLING */
 
+.orb {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+  -webkit-filter: blur(12px);
+          filter: blur(12px);
+  background: linear-gradient(-45deg, #08AEEA, #2AF598, #2AF598, #0086ff, #27b2ff, #ffffff, #000000, #08AEEA);
+  background-size: 500% 800%;
+  margin: auto;
+}
+.orb:before {
+  z-index: 1;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: -35px;
+  bottom: -35px;
+  left: -10px;
+  background: inherit;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: .6;
+  -webkit-animation: shapeColorShift 7s infinite;
+          animation: shapeColorShift 7s infinite;
+}
+
+@-webkit-keyframes shapeColorShift {
+  0% {
+    border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
+    background-position: 0% 0%;
+  }
+  50% {
+    border-radius: 20vw 40vw 20vw 40vw / 20vw 40vw 20vw 40vw;
+    background-position: 100% 100%;
+  }
+  100% {
+    border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
+    background-position: 0% 0%;
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes shapeColorShift {
+  0% {
+    border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
+    background-position: 0% 0%;
+  }
+  50% {
+    border-radius: 20vw 40vw 20vw 40vw / 20vw 40vw 20vw 40vw;
+    background-position: 100% 100%;
+  }
+  100% {
+    border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
+    background-position: 0% 0%;
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
 .orb-normal {
+  position: absolute;
   width: 250px;
   height: 250px;
   -webkit-animation: shapeColorShift 7s infinite;
@@ -87,9 +161,11 @@ h1 {
           filter: blur(12px);
   background: linear-gradient(-45deg, #08AEEA, #2AF598, #2AF598, #F72585, #27b2ff, #ffffff, #000000, #FFBD00);
   background-size: 500% 800%;
+  margin: 'auto';
 }
 .orb-normal:before {
   /* content: ''; */
+  margin: 'auto';
   display: block;
   position: absolute;
   /* top: -10px;
@@ -198,16 +274,15 @@ h1 {
 
 /* BLOOD SUGAR DISPLAY STYLING */
 .egv {
+  position: relative;
   font-family: 'Permanent Marker', cursive;
   z-index: 0;
   content: "";
   display: block;
-  /* position: absolute; */
   font-size: 70px;
-  color: black;
+  color: white;
   margin: auto;
-  /* margin-top: -185px;
-  margin-left: 73px; */
+  margin-top: -170px;
 }
 
 /* TEXT BUTTON */
@@ -291,6 +366,9 @@ button.round:active {
 
 #icon-buttons {
   position: relative;
+  margin: auto;
+  margin-top: 140px;
+  margin-left: 40px;
 }
 
 /* SYMPTOM BUTTONS */
