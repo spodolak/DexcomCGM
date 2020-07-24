@@ -1,7 +1,6 @@
 import React from 'react';
 import AppControl from './AppControl';
 import Dexcom from './Dexcom';
-import FootNavigation from './AppFooter.js';
 import '../App.css';
 
 class DexcomControl extends React.Component {
@@ -33,10 +32,6 @@ class DexcomControl extends React.Component {
         <div>
             {currentlyVisibleState}
         </div>
-        <div >
-            <FootNavigation key={this.state.dexcomLoggedIn} isLoggedIn={this.state.dexcomLoggedIn}/>
-        </div>
-
       </React.Fragment>
     );
   }

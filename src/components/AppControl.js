@@ -4,6 +4,7 @@ import Calibrate from './Calibrate';
 import AddSymptom from './AddSymptom';
 import DexcomError from './DexcomError';
 import Graph from './Graph';
+import FootNavigation from './AppFooter.js';
 
 class AppControl extends React.Component {
     constructor(props) {
@@ -97,6 +98,9 @@ class AppControl extends React.Component {
                 case 'graph':
                     currentlyVisibleState = <Graph values={this.state.bloodSugarValues} onSwitchingViews={this.handleSwitchingViews} />
                     break;
+                case 'home':
+                    currentlyVisibleState = <CurrentBloodSugar value={this.state.currentBloodSugar} onSwitchingViews={this.handleSwitchingViews} />
+                    break;
                 default:
                     currentlyVisibleState = <CurrentBloodSugar value={this.state.currentBloodSugar} onSwitchingViews={this.handleSwitchingViews} />
             }
@@ -107,6 +111,7 @@ class AppControl extends React.Component {
         return (
             <React.Fragment>
                 {currentlyVisibleState}
+                <FootNavigation isLoggedIn={true} onSwitchingViews={this.handleSwitchingViews}/>
             </React.Fragment>
         );
     }

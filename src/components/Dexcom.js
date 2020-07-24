@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import Footer from './Footer';
 import { Grid } from '@material-ui/core';
 import logo from './../img/app_logo_invert.png'
+import FootNavigation from './AppFooter.js';
+import '../App.css';
 
 const clientId = process.env.REACT_APP_CLIENT_ID;
 
@@ -30,9 +31,7 @@ function Dexcom(props) {
                     <button className="outline">Log In</button>
                     </a>
                 </Grid>
-                {/* <Grid item xs={12}>
-                    <Footer />    
-                </Grid> */}
+                <FootNavigation isLoggedIn={false}/>
             </Grid>
         </React.Fragment>
     )
