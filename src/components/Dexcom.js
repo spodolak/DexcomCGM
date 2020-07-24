@@ -22,7 +22,7 @@ function Dexcom(props) {
                 <Grid item xs={12}>
                     <a
                         className="App-link"
-                        href={'https://sandbox-api.dexcom.com/v2/oauth2/login?client_id=' + clientId + '&redirect_uri=http://localhost:3000&response_type=code&scope=offline_access&state=auth'}
+                        href={'https://sandbox-api.dexcom.com/v2/oauth2/login?client_id=' + clientId + '&redirect_uri=http://spodolak.github.io/DexcomCGM&response_type=code&scope=offline_access&state=auth'}
                         // href={'https://api.dexcom.com/v2/oauth2/login?client_id='+ clientId + '&redirect_uri=http://localhost:3000&response_type=code&scope=offline_access&state=auth'}
                         target="_blank"
                         rel="noopener noreferrer"
