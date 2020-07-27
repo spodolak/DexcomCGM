@@ -12,12 +12,12 @@ function AddSymptom(props) {
         <div key={`inline-${type}`} className="mb-3 ml-4">
           <Row className="justify-content-center">
             <div className="cc-selector">
-              <input id="sweaty" type="checkbox" value="sweaty" />
-              <label className="drinkcard-cc sweaty" for="sweaty"></label>
+              <input id="thirsty" type="checkbox" value="thirsty" />
+              <label className="drinkcard-cc thirsty" for="thirsty"></label>
             </div>
             <div className="cc-selector">
-              <input id="shaky" type="checkbox" value="shaky" />
-              <label className="drinkcard-cc shaky" for="shaky"></label>
+              <input id="frequent-urination" type="checkbox" value="frequent-urination" />
+              <label className="drinkcard-cc frequent-urination" for="frequent-urination"></label>
             </div>
             <div className="cc-selector">
               <input id="irritable" type="checkbox" value="irritable" />
@@ -26,12 +26,12 @@ function AddSymptom(props) {
           </Row>
           <Row className="justify-content-center">
             <div className="cc-selector">
-              <input id="hungry" type="checkbox" value="hungry" />
-              <label className="drinkcard-cc hungry" for="hungry"></label>
+              <input id="blurry-vision" type="checkbox" value="blurry-vision" />
+              <label className="drinkcard-cc blurry-vision" for="blurry-vision"></label>
             </div>
             <div className="cc-selector">
-              <input id="dizzy" type="checkbox" value="dizzy" />
-              <label className="drinkcard-cc dizzy" for="dizzy"></label>
+              <input id="headache" type="checkbox" value="headache" />
+              <label className="drinkcard-cc headache" for="headache"></label>
             </div>
             <div className="cc-selector">
               <input id="sleepy" type="checkbox" value="sleepy" />

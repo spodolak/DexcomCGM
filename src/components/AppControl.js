@@ -2,6 +2,7 @@ import React from 'react';
 import CurrentBloodSugar from './CurrentBloodSugar';
 import Calibrate from './Calibrate';
 import AddSymptom from './AddSymptom';
+import AddHighSymptom from './AddHighSymptom';
 import DexcomError from './DexcomError';
 import Graph from './Graph';
 import FootNavigation from './AppFooter.js';
@@ -28,7 +29,7 @@ class AppControl extends React.Component {
         urlencoded.append("client_secret", `${process.env.REACT_APP_CLIENT_SECRET}`);
         urlencoded.append("code", `${window.location.search.slice(6, 38)}`);
         urlencoded.append("grant_type", "authorization_code");
-        urlencoded.append("redirect_uri", "http://spodolak.github.io/DexcomCGM");
+        urlencoded.append("redirect_uri", "http://localhost:3000");
 
         var requestOptions = {
             method: 'POST',
@@ -92,8 +93,11 @@ class AppControl extends React.Component {
                 case 'calibrate':
                     currentlyVisibleState = <Calibrate onCalibrate={this.handleCalibrate} onSwitchingViews={this.handleSwitchingViews} />
                     break;
+                // case 'add_symptom':
+                //     currentlyVisibleState = <AddSymptom onSwitchingViews={this.handleSwitchingViews} />
+                //     break;
                 case 'add_symptom':
-                    currentlyVisibleState = <AddSymptom onSwitchingViews={this.handleSwitchingViews} />
+                    currentlyVisibleState = <AddHighSymptom onSwitchingViews={this.handleSwitchingViews} />
                     break;
                 case 'graph':
                     currentlyVisibleState = <Graph values={this.state.bloodSugarValues} onSwitchingViews={this.handleSwitchingViews} />

@@ -11,8 +11,8 @@ function CircleIconButton(props) {
   <React.Fragment> 
       <Row className="mt-5">
       </Row>
-      <Row className="mt-5">
-      </Row>
+      {/* <Row className="mt-2">
+      </Row> */}
       <Row id="icon-buttons" className="justify-content-center">
         <Col className="justify-content-center" id="icon">
           <button className="round" onClick={()=> props.onSwitchingViews('add_symptom')}>

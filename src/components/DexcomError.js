@@ -9,7 +9,7 @@ function DexcomError(props) {
     <h2>Please log into Dexcom</h2><br></br>
     <a
     className="App-link"
-    href={'https://api.dexcom.com/v2/oauth2/login?client_id='+ clientId + '&redirect_uri=http://localhost:3000&response_type=code&scope=offline_access&state=auth'}
+    href={'https://sandbox-api.dexcom.com/v2/oauth2/login?client_id=' + clientId + '&redirect_uri=http://localhost:3000&response_type=code&scope=offline_access&state=auth'}
     target="_blank"
     rel="noopener noreferrer"
     onClick={()=> props.onClickingLogIn}
