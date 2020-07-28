@@ -328,20 +328,20 @@ button.round:active {
 
 
 .sweaty {
-  background-image: url(./img/sweaty.png);
+  background-image: url(./img/emojis/sweaty.png);
 }
 input#sweaty {
   display: none;
 }
 .cc-selector input#sweaty:checked +.drinkcard-cc{
-    background-image: url(./img/sweaty-text.png);
+    background-image: url(./img/emoji-text/sweaty-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.sweaty:hover{
-background-image: url(./img/sweaty-text.png);
+background-image: url(./img/emoji-text/sweaty-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
@@ -349,180 +349,180 @@ background-image: url(./img/sweaty-text.png);
 
 
 .irritable {
-  background-image: url(./img/irritable.png);
+  background-image: url(./img/emojis/irritable.png);
 }
 input#irritable {
   display: none;
 }
 .cc-selector input#irritable:checked +.drinkcard-cc{
-    background-image: url(./img/irritable-text.png);
+    background-image: url(./img/emoji-text/irritable-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.irritable:hover{
-background-image: url(./img/irritable-text.png);
+background-image: url(./img/emoji-text/irritable-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
 
 .hungry {
-  background-image: url(./img/hungry.png);
+  background-image: url(./img/emojis/hungry.png);
 }
 input#hungry {
   display: none;
 }
 .cc-selector input#hungry:checked +.drinkcard-cc{
-    background-image: url(./img/hungry-text.png);
+    background-image: url(./img/emoji-text/hungry-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.hungry:hover{
-background-image: url(./img/hungry-text.png);
+background-image: url(./img/emoji-text/hungry-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
 
 .dizzy {
-  background-image: url(./img/dizzy.png);
+  background-image: url(./img/emojis/dizzy.png);
 }
 input#dizzy {
   display: none;
 }
 .cc-selector input#dizzy:checked +.drinkcard-cc{
-    background-image: url(./img/dizzy-text.png);
+    background-image: url(./img/emoji-text/dizzy-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.dizzy:hover{
-background-image: url(./img/dizzy-text.png);
+background-image: url(./img/emoji-text/dizzy-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
 
 .sleepy {
-  background-image: url(./img/sleepy.png);
+  background-image: url(./img/emojis/sleepy.png);
 }
 input#sleepy {
   display: none;
 }
 .cc-selector input#sleepy:checked +.drinkcard-cc{
-    background-image: url(./img/sleepy-text.png);
+    background-image: url(./img/emoji-text/sleepy-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.sleepy:hover{
-background-image: url(./img/sleepy-text.png);
+background-image: url(./img/emoji-text/sleepy-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
 
 .shaky {
-  background-image: url(./img/shaky.png);
+  background-image: url(./img/emojis/shaky.png);
 }
 input#shaky {
   display: none;
 }
 .cc-selector input#shaky:checked +.drinkcard-cc{
-    background-image: url(./img/shaky-text.png);
+    background-image: url(./img/emoji-text/shaky-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.shaky:hover{
-background-image: url(./img/shaky-text.png);
+background-image: url(./img/emoji-text/shaky-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
 
 .thirsty {
-  background-image: url(./img/thirsty.png);
+  background-image: url(./img/emojis/thirsty.png);
 }
 input#thirsty {
   display: none;
 }
 .cc-selector input#thirsty:checked +.drinkcard-cc{
-    background-image: url(./img/thirsty-text.png);
+    background-image: url(./img/emoji-text/thirsty-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.thirsty:hover{
-background-image: url(./img/thirsty-text.png);
+background-image: url(./img/emoji-text/thirsty-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
 
 .frequent-urination {
-  background-image: url(./img/frequent-urination.png);
+  background-image: url(./img/emojis/frequent-urination.png);
 }
 input#frequent-urination {
   display: none;
 }
 .cc-selector input#frequent-urination:checked +.drinkcard-cc{
-    background-image: url(./img/frequent-urination-text.png);
+    background-image: url(./img/emoji-text/frequent-urination-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.frequent-urination:hover{
-background-image: url(./img/frequent-urination-text.png);
+background-image: url(./img/emoji-text/frequent-urination-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
 
 .blurry-vision {
-  background-image: url(./img/blurry-vision.png);
+  background-image: url(./img/emojis/blurry-vision.png);
 }
 input#blurry-vision {
   display: none;
 }
 .cc-selector input#blurry-vision:checked +.drinkcard-cc{
-    background-image: url(./img/blurry-vision-text.png);
+    background-image: url(./img/emoji-text/blurry-vision-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.blurry-vision:hover{
-background-image: url(./img/blurry-vision-text.png);
+background-image: url(./img/emoji-text/blurry-vision-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
 }
 
 .headache {
-  background-image: url(./img/headache.png);
+  background-image: url(./img/emojis/headache.png);
 }
 input#headache {
   display: none;
 }
 .cc-selector input#headache:checked +.drinkcard-cc{
-    background-image: url(./img/headache-text.png);
+    background-image: url(./img/emoji-text/headache-text.png);
     transition: all 0.4s linear;
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
   }
 .drinkcard-cc.headache:hover{
-background-image: url(./img/headache-text.png);
+background-image: url(./img/emoji-text/headache-text.png);
 -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
         filter: brightness(1.2) grayscale(.5) opacity(.9);     
