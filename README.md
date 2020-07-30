@@ -1,6 +1,6 @@
 # Continuous Glucose Monitoring with [Dexcom](https://www.dexcom.com/)
 
-#### Empower Type 1 diabetes management through mindfulness (for kids!)
+#### Your child's diabetic mood ring.
 
 The application displays the user's current blood sugar values and teaches the user body awareness by prompting them to log physical symptoms during critical blood sugar changes.  The user should be wearing a [Dexcom Continuous Glucose Monitor [CGM]](https://www.dexcom.com/g6/how-it-works). 
 
@@ -32,6 +32,38 @@ The application displays the user's current blood sugar values and teaches the u
 * React-Bootstrap
 * Google Fonts
 
+## Demo application with Dexcom Sandbox data with npm
+# 1. Register as a developer with Dexcom
+In order to gain access to Dexcom API sandbox data, you must first [register as a dexcom developer](https://developer.dexcom.com/user/register) and log in to your account.   
+
+Next, create an App by navigating to your username in the top right corner of your account page, click on the drop down menu and select 'My Apps'.
+
+# 2. Clone this repository
+
+Enter the following commands in Terminal (macOS) or PowerShell (Windows):
+```sh
+cd desktop
+git clone https://github.com/spodolak/DexcomCGM
+cd Dexcom CGM
+```
+# 3. Install all necessary packages and make sure the project will build
+In your terminal, type the following commands to make sure all necessary packages are included in the project and to launch in your browser:
+```sh
+npm install
+```
+
+# 5. Launch the project in your browser
+In your terminal, type:
+```sh
+npm run start
+```
+Hold ```command``` while clicking the link in your local terminal to your local address, which should be:
+```sh
+http://localhost:3000
+```
+
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -47,11 +79,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
