@@ -24,6 +24,8 @@ class AppControl extends React.Component {
         };
     }
 
+    //////Oauth 2.0 authorization
+    //Step 1: Get bearere Token
     getBearerToken = () => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -42,8 +44,8 @@ class AppControl extends React.Component {
             redirect: 'follow'
         };
 
-        fetch("https://sandbox-api.dexcom.com/v2/oauth2/token", requestOptions) //Sandbox data URL
-            // fetch("https://api.dexcom.com/v2/oauth2/token", requestOptions) //Dexcom user URL
+        fetch("https://sandbox-api.dexcom.com/v2/oauth2/token", requestOptions) //Fetch sandbox dev token
+            // fetch("https://api.dexcom.com/v2/oauth2/token", requestOptions) //Fetch dexcom user data
             .then(response => response.json())
             .then((response) => {
                 this.setState({ bearerToken: response.access_token });
@@ -53,6 +55,7 @@ class AppControl extends React.Component {
             .catch(error => console.log('error', error));
     }
 
+    //get current time to fetch up-to-date blood sugars
     getTime = () => {
         function addZero(n) {
             if (n < 10) {
@@ -67,7 +70,9 @@ class AppControl extends React.Component {
         let seconds = addZero(time.getSeconds());
         
         return hours + ":" + minutes + ":" + seconds;
-    }    
+    } 
+
+    //Step 2: Get current blood sugars with bearer token
     getBloodSugars = (token) => {
         let currentTime = this.getTime(); 
         
@@ -79,8 +84,8 @@ class AppControl extends React.Component {
             headers: myHeaders,
             redirect: 'follow'
         };
-        fetch(`https://sandbox-api.dexcom.com/v2/users/self/egvs?startDate=2020-05-26T00:00:00&endDate=2020-05-26T${currentTime}`, requestOptions) //Sandbox data URL
-            // fetch("https://api.dexcom.com/v2/users/self/egvs?startDate=2020-05-26T00:00:00&endDate=2020-05-26T23:59:00", requestOptions) //Dexcom user URL
+        fetch(`https://sandbox-api.dexcom.com/v2/users/self/egvs?startDate=2020-05-25T${currentTime}&endDate=2020-05-26T${currentTime}`, requestOptions) //Fetch sandbox dev data
+            // fetch("https://api.dexcom.com/v2/users/self/egvs?startDate=2020-05-26T00:00:00&endDate=2020-05-26T23:59:00", requestOptions) //Fetch dexcom user data
             .then(response => response.json())
             .then((response) => {
                 this.setState({ bloodSugarValues: response.egvs });

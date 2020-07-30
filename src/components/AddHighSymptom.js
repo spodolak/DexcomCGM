@@ -35,7 +35,13 @@ function AddSymptom(props) {
         setSleepy(!sleepy)
     }
 
-    const firebasePostSymptom = () => {
+    const fetchFirestoreSymptoms = async () => {
+        const data =  await firebase.firestore().collection('symptoms').doc('log').get()
+        .then(value => {return value.data()})
+        return data;
+    }
+
+    const firebasePostSymptom = async () => {
         const timeStamp = new Date().getTime()
         const currentSymptom = {
             [timeStamp]: {
@@ -54,7 +60,8 @@ function AddSymptom(props) {
                 }
             }
         }
-        firebase.firestore().collection('symptoms').doc('log').update(currentSymptom);
+        const data = await fetchFirestoreSymptoms();
+        firebase.firestore().collection('symptoms').doc('log').update({symptoms: [...data.symptoms, currentSymptom]});
     }
 
     const onSubmit = () => {

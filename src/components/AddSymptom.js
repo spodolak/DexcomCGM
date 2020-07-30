@@ -47,31 +47,38 @@ function AddSymptom(props) {
         setDizzy(!dizzy)
     }
 
-    const firebasePostSymptom = () => {
+    const fetchFirestoreSymptoms = async () => {
+        const data =  await firebase.firestore().collection('symptoms').doc('log').get()
+        .then(value => {return value.data()})
+        return data;
+    }
+
+    const postFirebaseSymptom = async () => {
         const timeStamp = new Date().getTime()
         const currentSymptom = {
             [timeStamp]: {
                 timeStamp: new Date(),
-                symptoms : {
+                symptoms: {
                     thirsty,
                     frequentUrination,
                     irritable,
                     blurryVision,
                     headache,
-                    sleepy, 
-                    sweaty, 
+                    sleepy,
+                    sweaty,
                     shaky,
-                    hungry, 
+                    hungry,
                     dizzy,
                 }
             }
         }
-        firebase.firestore().collection('symptoms').doc('log').update(currentSymptom);
+        const data = await fetchFirestoreSymptoms();
+        firebase.firestore().collection('symptoms').doc('log').update({symptoms: [...data.symptoms, currentSymptom]});
     }
 
     const onSubmit = () => {
         props.onSwitchingViews('');
-        firebasePostSymptom()
+        postFirebaseSymptom()
     }
 
     return (
@@ -134,7 +141,7 @@ function AddSymptom(props) {
                 <Row className="justify-content-center">
                     <button class="outline" type="submit" onClick={() => onSubmit()}>
                         Log
-        </button>
+                    </button>
                 </Row>
             </Form>
         </React.Fragment>
