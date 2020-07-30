@@ -3,6 +3,13 @@ import PropTypes from "prop-types";
 import { Form, InputGroup } from 'react-bootstrap';
 
 function Calibrate(props) {
+  const {onSwitchingViews, alertCheck, onCalibrate} = props;
+
+  const submitCalibrate = () => {
+    onSwitchingViews('');
+    alertCheck();
+  }
+
   return ( 
       <React.Fragment>
         <Form>
@@ -15,7 +22,7 @@ function Calibrate(props) {
                 classType="text-center" 
                 type="calibrate" 
                 placeholder="mg/dL"
-                onChange={props.onCalibrate}
+                onChange={onCalibrate}
                 style={{marginLeft: "20%", marginRight: "20%"}}
               />
             </InputGroup>
@@ -25,7 +32,7 @@ function Calibrate(props) {
               3. Promptly enter the exact value from your meter<br></br>
             </Form.Text>
           </Form.Group>
-          <button className="outline" onClick={()=> props.onSwitchingViews('')} type="submit">
+          <button className="outline" onClick={()=> submitCalibrate()} type="submit">
             Calibrate
           </button>
         </Form>     

@@ -90,8 +90,6 @@ class AppControl extends React.Component {
     }
 
     
-    
-    
     componentDidMount() {
         if (this.state.bearerToken === '') {
             this.getBearerToken();
@@ -99,16 +97,16 @@ class AppControl extends React.Component {
             this.getBloodSugars(this.state.bearerToken);
         }
         setInterval(() => {
-            console.log("blood sugar update", this.state.currentBloodSugar)
             this.getBloodSugars(this.state.bearerToken);
+            this.handleAlert();
         }, 60000);
     }
     
     handleAlert = () => {
-        if (this.state.currentBloodSugar < this.state.lowAlert ) {
+        if (this.state.currentBloodSugar <= this.state.lowAlert ) {
             this.setState({currentView: 'add_low_symptom'})
         }
-        if (this.state.currentBloodSugar > this.state.highAlert ) {
+        if (this.state.currentBloodSugar >= this.state.highAlert ) {
             this.setState({currentView: 'add_high_symptom'})
         }
     }

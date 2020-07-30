@@ -57,6 +57,7 @@ body {
         justify-content: center; */
   -webkit-box-align: center;
         align-items: center;
+  -webkit-backface-visibility: hidden;
 }
 
 h1 {
@@ -80,7 +81,24 @@ h1 {
     padding: 0px;
 }
 
+.chart {
+    justify-content: center;
+}
+
 /* ORB STYLING */
+
+.orb-mask {
+    position: absolute;
+    z-index: 0;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    top: 100%;
+    /* padding: 500px; */
+    background-image: radial-gradient(transparent 150px, transparent 150px, black);
+    pointer-events: none;
+}
+
 
 .orb {
   position: relative;
@@ -91,8 +109,9 @@ h1 {
   -webkit-filter: blur(12px);
           filter: blur(12px);
   background: linear-gradient(-45deg, #08AEEA, #ccd45f, #2d268e, #17bb9f, #d0259c, #ffffff, #3f3944, #08AEEA);
-  background-size: 500% 800%;
+  background-size: 500% 500%;
   margin: auto;
+  display: block;
 }
 .orb:before {
   z-index: 1;
@@ -192,7 +211,7 @@ h1 {
   }
   50% {
     border-radius: 20vw 40vw 20vw 40vw / 20vw 40vw 20vw 40vw;
-    background-position: 100% 100%;
+    background-position: 0% 0%;
   }
   100% {
     border-radius: 50vw 50vw 50vw 50vw / 50vw 50vw 50vw 50vw;
@@ -212,7 +231,7 @@ h1 {
 .egv {
   position: relative;
   font-family: 'Permanent Marker', cursive;
-  z-index: 0;
+  z-index: 3;
   content: "";
   display: block;
   font-size: 70px;
@@ -267,7 +286,7 @@ button.round {
   border-style: solid;
   border-width: 0px;
   border-radius: 50% 50%;
-  padding: 20px 20px;
+  padding: 1px 1px;
   text-transform: uppercase;
   transition: all 0.2s linear;
 }

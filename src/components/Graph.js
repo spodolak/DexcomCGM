@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types";
 import ReactApexCharts from 'react-apexcharts';
 import { Row } from 'react-bootstrap';
+import '../App.css';
 
 class Graph extends React.Component {	
   constructor(props) {
@@ -48,7 +49,7 @@ class Graph extends React.Component {
     return (
       <React.Fragment>
         <br></br><h1>Great day!</h1><br></br>
-        <Row className="justify-content-center mr-3" id="chart">
+        <Row className="chart" id="chart">
           <ReactApexCharts options={this.state.options} series={this.state.series} type="area" height={350} width={600}/>
         </Row>
         <div>

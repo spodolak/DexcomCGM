@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import CircleIconButton from "./CircleIconButton";
 import Orb from './Orb';
 import { Grid } from '@material-ui/core';
-import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -17,17 +16,18 @@ const useStyles = makeStyles({
 
 
 export default function CurrentBloodSugar(props) {
+    const {value, lowLimit, highLimit, onSwitchingViews } = props;
     const classes = useStyles();
     return (
         <React.Fragment>
             <div className={classes.root}>
                 <Grid container >
                     <Grid item xs={12}> 
-                        <Orb egv={props.value} />
-                        <p className="egv">{props.value}</p>
+                        <Orb egv={value} lowLimit={lowLimit} highLimit={highLimit} />
+                        <p className="egv">{value}</p>
                     </Grid>
                     <Grid item xs={12}> 
-                        <CircleIconButton onSwitchingViews={props.onSwitchingViews} />
+                        <CircleIconButton onSwitchingViews={onSwitchingViews} />
                     </Grid>
                 </Grid>
             </div>
@@ -36,6 +36,8 @@ export default function CurrentBloodSugar(props) {
 }
 
 CurrentBloodSugar.propTypes = {
+    lowLimit: PropTypes.number,
+    highLimit: PropTypes.number,
     value: PropTypes.number,
     onSwitchingViews: PropTypes.func
 }
