@@ -113,6 +113,14 @@ h1 {
   color: #2D268E;
 }
 
+#high-text{
+  color: #FF1B1C
+}
+
+#low-text{
+  color: #0D0221
+}
+
 #footer{
   font-family: 'Raleway', sans-serif;
   font-size: 15px;

@@ -36,8 +36,8 @@ function AddSymptom(props) {
     }
 
     const fetchFirestoreSymptoms = async () => {
-        const data =  await firebase.firestore().collection('symptoms').doc('log').get()
-        .then(value => {return value.data()})
+        const data = await firebase.firestore().collection('symptoms').doc('log').get()
+            .then(value => { return value.data() })
         return data;
     }
 
@@ -46,22 +46,22 @@ function AddSymptom(props) {
         const currentSymptom = {
             [timeStamp]: {
                 timeStamp: new Date(),
-                symptoms : {
+                symptoms: {
                     thirsty,
                     frequentUrination,
                     irritable,
                     blurryVision,
                     headache,
-                    sleepy, 
-                    sweaty, 
+                    sleepy,
+                    sweaty,
                     shaky,
-                    hungry, 
+                    hungry,
                     dizzy,
                 }
             }
         }
         const data = await fetchFirestoreSymptoms();
-        firebase.firestore().collection('symptoms').doc('log').update({symptoms: [...data.symptoms, currentSymptom]});
+        firebase.firestore().collection('symptoms').doc('log').update({ symptoms: [...data.symptoms, currentSymptom] });
     }
 
     const onSubmit = () => {
@@ -71,6 +71,7 @@ function AddSymptom(props) {
 
     return (
         <React.Fragment>
+            <h1>Your blood sugar is <span id="high-text">HIGH</span></h1>
             <h1>How do you feel?</h1>
             <br></br>
             <Form>
@@ -82,7 +83,7 @@ function AddSymptom(props) {
                                 <label className="drinkcard-cc thirsty" for="thirsty"></label>
                             </div>
                             <div className="cc-selector">
-                                <input id="frequent-urination" type="checkbox" value="frequent-urination" onChange={onFrequentUrinationCheck}/>
+                                <input id="frequent-urination" type="checkbox" value="frequent-urination" onChange={onFrequentUrinationCheck} />
                                 <label className="drinkcard-cc frequent-urination" for="frequent-urination"></label>
                             </div>
                             <div className="cc-selector">
@@ -92,11 +93,11 @@ function AddSymptom(props) {
                         </Row>
                         <Row className="justify-content-center">
                             <div className="cc-selector">
-                                <input id="blurry-vision" type="checkbox" value="blurry-vision" onChange={onBlurryVisionCheck}/>
+                                <input id="blurry-vision" type="checkbox" value="blurry-vision" onChange={onBlurryVisionCheck} />
                                 <label className="drinkcard-cc blurry-vision" for="blurry-vision"></label>
                             </div>
                             <div className="cc-selector">
-                                <input id="headache" type="checkbox" value="headache" onChange={onHeadacheCheck}/>
+                                <input id="headache" type="checkbox" value="headache" onChange={onHeadacheCheck} />
                                 <label className="drinkcard-cc headache" for="headache"></label>
                             </div>
                             <div className="cc-selector">

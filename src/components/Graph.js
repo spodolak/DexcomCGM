@@ -7,8 +7,8 @@ import firebase from '../firebase.js'
 
 
 const fetchFirestoreSymptoms = async () => {
-    const data =  await firebase.firestore().collection('symptoms').doc('log').get()
-    .then(value => {return value.data()})
+    const data = await firebase.firestore().collection('symptoms').doc('log').get()
+        .then(value => { return value.data() })
     return data;
 }
 
@@ -57,10 +57,10 @@ class Graph extends React.Component {
     }
 
     componentDidMount = async () => {
-        const values =  await fetchFirestoreSymptoms()
-        this.setState({symptoms: values});
+        const values = await fetchFirestoreSymptoms()
+        this.setState({ symptoms: values });
     }
-    
+
     render() {
         return (
             <React.Fragment>

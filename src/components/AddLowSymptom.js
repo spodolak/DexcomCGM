@@ -36,8 +36,8 @@ function AddSymptom(props) {
     }
 
     const fetchFirestoreSymptoms = async () => {
-        const data =  await firebase.firestore().collection('symptoms').doc('log').get()
-        .then(value => {return value.data()})
+        const data = await firebase.firestore().collection('symptoms').doc('log').get()
+            .then(value => { return value.data() })
         return data;
     }
 
@@ -46,31 +46,32 @@ function AddSymptom(props) {
         const currentSymptom = {
             [timeStamp]: {
                 timeStamp: new Date(),
-                symptoms : {
+                symptoms: {
                     thirsty,
                     frequentUrination,
                     irritable,
                     blurryVision,
                     headache,
-                    sleepy, 
-                    sweaty, 
+                    sleepy,
+                    sweaty,
                     shaky,
-                    hungry, 
+                    hungry,
                     dizzy,
                 }
             }
         }
         const data = await fetchFirestoreSymptoms();
-        firebase.firestore().collection('symptoms').doc('log').update({symptoms: [...data.symptoms, currentSymptom]});
+        firebase.firestore().collection('symptoms').doc('log').update({ symptoms: [...data.symptoms, currentSymptom] });
     }
 
     const onSubmit = () => {
         props.onSwitchingViews('');
         firebasePostSymptom()
     }
-    
+
     return (
         <React.Fragment>
+            <h1>Your blood sugar is <span id="low-text">LOW</span></h1>
             <h1>How do you feel?</h1>
             <br></br>
             <Form>
