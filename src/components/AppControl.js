@@ -17,7 +17,8 @@ class AppControl extends React.Component {
             bearerToken: '',
             currentBloodSugar: null,
             lowAlert: 70,
-            highAlert: 200,
+            highAlert: 180,
+            currentAlert: 'noAlert', //'lowAlert or 'highAlert'
             bloodSugarValues: null,
             currentView: null,
             timer: null
@@ -63,19 +64,19 @@ class AppControl extends React.Component {
             }
             return n.toString();
         }
-        
+
         let time = new Date();
         let hours = addZero(time.getHours());
         let minutes = addZero(time.getMinutes());
         let seconds = addZero(time.getSeconds());
-        
+
         return hours + ":" + minutes + ":" + seconds;
-    } 
+    }
 
     //Step 2: Get current blood sugars with bearer token
     getBloodSugars = (token) => {
-        let currentTime = this.getTime(); 
-        
+        let currentTime = this.getTime();
+
         var myHeaders = new Headers();
         myHeaders.append("Authorization", `Bearer ${token}`);
 
@@ -90,11 +91,12 @@ class AppControl extends React.Component {
             .then((response) => {
                 this.setState({ bloodSugarValues: response.egvs });
                 this.setState({ currentBloodSugar: response.egvs[0].realtimeValue });
+                this.handleAlert();
             })
             .catch(error => console.log('error', error));
     }
 
-    
+
     componentDidMount() {
         if (this.state.bearerToken === '') {
             this.getBearerToken();
@@ -106,13 +108,14 @@ class AppControl extends React.Component {
             this.handleAlert();
         }, 60000);
     }
-    
+
     handleAlert = () => {
-        if (this.state.currentBloodSugar <= this.state.lowAlert ) {
-            this.setState({currentView: 'add_low_symptom'})
-        }
-        if (this.state.currentBloodSugar >= this.state.highAlert ) {
-            this.setState({currentView: 'add_high_symptom'})
+        if (this.state.currentBloodSugar <= this.state.lowAlert) {
+            this.setState({ currentView: 'add_low_symptom', currentAlert: 'lowAlert' })
+        } else if (this.state.currentBloodSugar >= this.state.highAlert) {
+            this.setState({ currentView: 'add_high_symptom', currentAlert: 'highAlert' })
+        } else {
+            this.setState({ currentAlert: 'noAlert' })
         }
     }
 
@@ -129,7 +132,7 @@ class AppControl extends React.Component {
         if (this.state.bloodSugarValues != null) {
             switch (this.state.currentView) {
                 case 'calibrate':
-                    currentlyVisibleState = <Calibrate onCalibrate={this.handleCalibrate} onSwitchingViews={this.handleSwitchingViews} alertCheck = {this.handleAlert}/>
+                    currentlyVisibleState = <Calibrate onCalibrate={this.handleCalibrate} onSwitchingViews={this.handleSwitchingViews} alertCheck={this.handleAlert} />
                     break;
                 case 'add_symptom':
                     currentlyVisibleState = <AddSymptom onSwitchingViews={this.handleSwitchingViews} />
@@ -144,10 +147,10 @@ class AppControl extends React.Component {
                     currentlyVisibleState = <Graph values={this.state.bloodSugarValues} onSwitchingViews={this.handleSwitchingViews} />
                     break;
                 case 'home':
-                    currentlyVisibleState = <CurrentBloodSugar value={this.state.currentBloodSugar} lowLimit={this.state.lowAlert} highLimit={this.state.highAlert} onSwitchingViews={this.handleSwitchingViews} />
+                    currentlyVisibleState = <CurrentBloodSugar value={this.state.currentBloodSugar} currentAlert={this.state.currentAlert} onSwitchingViews={this.handleSwitchingViews} />
                     break;
                 default:
-                    currentlyVisibleState = <CurrentBloodSugar value={this.state.currentBloodSugar} lowLimit={this.state.lowAlert} highLimit={this.state.highAlert} onSwitchingViews={this.handleSwitchingViews} />
+                    currentlyVisibleState = <CurrentBloodSugar value={this.state.currentBloodSugar} currentAlert={this.state.currentAlert} onSwitchingViews={this.handleSwitchingViews} />
             }
         } else {
             currentlyVisibleState = <DexcomError />
@@ -156,7 +159,7 @@ class AppControl extends React.Component {
         return (
             <React.Fragment>
                 {currentlyVisibleState}
-                <FootNavigation isLoggedIn={true} onSwitchingViews={this.handleSwitchingViews}/>
+                <FootNavigation isLoggedIn={true} onSwitchingViews={this.handleSwitchingViews} currentAlert={this.state.currentAlert} />
             </React.Fragment>
         );
     }

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /* REACT APP STYLING */
 .App {
@@ -92,13 +93,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  /* margin-bottom:150px;  */
+margin-bottom:150px; 
   background-image: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255),  white, white, white, white, white,white, rgb(255, 255, 255),  rgb(255, 255, 255), rgb(236, 236, 236), rgb(236, 236, 236));
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
   height: 100%;
-  /* overflow: hidden; */
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -146,7 +146,7 @@ h1 {
 }
 
 
-.orb {
+.orb-noAlert {
   position: relative;
   width: 240px;
   height: 240px;
@@ -154,12 +154,12 @@ h1 {
           animation: shapeColorShift 7s infinite;
   -webkit-filter: blur(12px);
           filter: blur(12px);
-  background: linear-gradient(-45deg, #08AEEA, #ccd45f, #2d268e, #17bb9f, #d0259c, #ffffff, #3f3944, #08AEEA);
+  background: linear-gradient(-45deg, #EFAAC4  , #d0259c, #D6D84F , #08AEEA, #ECD444, #CB429F, #2d268e);
   background-size: 500% 500%;
   margin: auto;
   display: block;
 }
-.orb:before {
+.orb-noAlert:before {
   z-index: 1;
   content: '';
   display: block;
@@ -176,7 +176,7 @@ h1 {
           animation: shapeColorShift 7s infinite;
 }
 
-.orb-low {
+.orb-lowAlert {
   position: relative;
   width: 240px;
   height: 240px;
@@ -184,11 +184,11 @@ h1 {
           animation: shapeColorShift 7s infinite;
   -webkit-filter: blur(12px);
           filter: blur(12px);
-  background: linear-gradient(-45deg, #08AEEA, #2D268E , #0D0221, #004b8d, #2d268e, rgb(234, 251, 253), #0E0E52, #449DD1);
+  background: linear-gradient(-45deg, #0D0221, #2D268E , #0D0221, #004b8d, #2d268e, #1F271B, #0E0E52, #0D0221);
   background-size: 500% 800%;
   margin: auto;
 }
-.orb-low:before {
+.orb-lowAlert:before {
   z-index: 1;
   content: '';
   display: block;
@@ -204,7 +204,7 @@ h1 {
   -webkit-animation: shapeColorShift 7s infinite;
           animation: shapeColorShift 7s infinite;
 }
-.orb-high {
+.orb-highAlert {
   position: relative;
   width: 240px;
   height: 240px;
@@ -212,11 +212,11 @@ h1 {
           animation: shapeColorShift 7s infinite;
   -webkit-filter: blur(12px);
           filter: blur(12px);
-  background: linear-gradient(-45deg, #F35B04, #F18701, #F7B801, #C42021, #610345, #ffffff, #FF1B1C, #95190C);
+  background: linear-gradient(-45deg, #FB62F6, #F18701, #F7B801, #C42021, #610345, #ffffff, #FF1B1C, #95190C);
   background-size: 500% 800%;
   margin: auto;
 }
-.orb-high:before {
+.orb-highAlert:before {
   z-index: 1;
   content: '';
   display: block;
@@ -276,18 +276,26 @@ h1 {
 /* BLOOD SUGAR DISPLAY STYLING */
 .egv {
   position: relative;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Raleway', sans-serif; */
+  /* font-family: 'Permanent Marker', cursive; */
   z-index: 3;
-  content: "";
+  /* content: ""; */
   display: block;
   font-size: 70px;
   color: white;
   margin: auto;
-  margin-top: -171px;
+  margin-top: -175px;
 }
 
-/* TEXT BUTTON */
+/* #lowAlert {
+    border-color: #0D0221;
+}
+#highAlert {
+    border-color: #95190C;
+} */
 
+/* TEXT BUTTON */
 
 button {
   cursor: pointer;

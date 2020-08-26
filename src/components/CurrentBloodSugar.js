@@ -19,18 +19,21 @@ const useStyles = makeStyles({
 
 
 export default function CurrentBloodSugar(props) {
-    const { value, lowLimit, highLimit, onSwitchingViews } = props;
+    const { value, currentAlert, onSwitchingViews } = props;
     const classes = useStyles();
     return (
         <React.Fragment>
             <div className={classes.root}>
                 <Grid container >
                     <Grid item xs={12}>
-                        <Orb egv={value} lowLimit={lowLimit} highLimit={highLimit} />
+                        <Orb alertState={"orb-" + currentAlert} />
                         <p className="egv">{value}</p>
                     </Grid>
                     <Grid item xs={12}>
                         <div className={classes.margin}>
+                            {/* <button class="outline" id={currentAlert} type="submit" onClick={() => onSwitchingViews('add_symptom')}>
+                                How do you feel?
+                            </button> */}
                             <button class="outline" type="submit" onClick={() => onSwitchingViews('add_symptom')}>
                                 How do you feel?
                             </button>
