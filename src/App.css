@@ -8,7 +8,7 @@
   position: absolute;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  top: 20%;
+  top: 18%;
   width: 100%;
   margin: auto;
 }
@@ -109,7 +109,7 @@ margin-bottom:150px;
 h1 {
   letter-spacing: 0.5px;
   font-family: 'Permanent Marker', cursive;
-  font-size: 70px;
+  font-size: 45px;
   color: #2D268E;
 }
 
@@ -320,7 +320,7 @@ button.outline {
   border-style: solid;
   border-width: 2px;
   border-radius: 50px;
-  padding: 10px 80px;
+  padding: 10px 75px;
   text-transform: uppercase;
   transition: all 0.2s linear;
 }
