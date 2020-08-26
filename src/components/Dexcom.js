@@ -10,14 +10,14 @@ const clientId = process.env.REACT_APP_CLIENT_ID;
 function Dexcom(props) {
     return (
         <React.Fragment>
-            <Grid container >
+            <Grid container className="app-logo-fade-in" >
                 <Grid item xs={12}>
-                    <div className="App-logo">
-                        <img src={logo} width = "275px" alt="icon"/> 
+                    <img className="app-logo-overlay" src={logo} alt="icon" width="300px" height="300px" />
+                    <div className="app-logo">
                     </div>
                 </Grid>
                 <Grid item xs={12}>
-                    <br></br><h4>Your child's diabetic mood ring</h4><br></br>
+                    <h4>Your child's diabetic mood ring</h4><br></br>
                 </Grid>
                 <Grid item xs={12}>
                     <a
@@ -28,11 +28,11 @@ function Dexcom(props) {
                         rel="noopener noreferrer"
                         onClick={() => props.onClickingLogIn}
                     >
-                    <button className="outline">Log In</button>
+                        <button className="outline">Log In</button>
                     </a>
                 </Grid>
-                <FootNavigation isLoggedIn={false}/>
             </Grid>
+            <FootNavigation isLoggedIn={false} />
         </React.Fragment>
     )
 }
