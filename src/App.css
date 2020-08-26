@@ -90,6 +90,8 @@ body {
   margin: auto; 
   padding: 0 ;
   background-image: linear-gradient(rgb(236, 236, 236), rgb(255, 255, 255),  white, white, white, white, white,white, rgb(255, 255, 255),  rgb(255, 255, 255), rgb(236, 236, 236), rgb(236, 236, 236));
+  width: 100%;
+  height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: -webkit-box;
