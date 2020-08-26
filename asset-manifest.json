@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/DexcomCGM/static/css/main.843625fd.chunk.css",
+    "main.css": "/DexcomCGM/static/css/main.d5f24114.chunk.css",
     "main.js": "/DexcomCGM/static/js/main.26fd721f.chunk.js",
     "main.js.map": "/DexcomCGM/static/js/main.26fd721f.chunk.js.map",
     "runtime-main.js": "/DexcomCGM/static/js/runtime-main.bcebdbf5.js",
@@ -9,10 +9,10 @@
     "static/js/2.d59f8e77.chunk.js": "/DexcomCGM/static/js/2.d59f8e77.chunk.js",
     "static/js/2.d59f8e77.chunk.js.map": "/DexcomCGM/static/js/2.d59f8e77.chunk.js.map",
     "index.html": "/DexcomCGM/index.html",
-    "precache-manifest.73628bd768ba22da00a26f8e55e3d28d.js": "/DexcomCGM/precache-manifest.73628bd768ba22da00a26f8e55e3d28d.js",
+    "precache-manifest.5df13603df76d2666aee66d7f687b712.js": "/DexcomCGM/precache-manifest.5df13603df76d2666aee66d7f687b712.js",
     "service-worker.js": "/DexcomCGM/service-worker.js",
     "static/css/2.9de105d4.chunk.css.map": "/DexcomCGM/static/css/2.9de105d4.chunk.css.map",
-    "static/css/main.843625fd.chunk.css.map": "/DexcomCGM/static/css/main.843625fd.chunk.css.map",
+    "static/css/main.d5f24114.chunk.css.map": "/DexcomCGM/static/css/main.d5f24114.chunk.css.map",
     "static/js/2.d59f8e77.chunk.js.LICENSE.txt": "/DexcomCGM/static/js/2.d59f8e77.chunk.js.LICENSE.txt",
     "static/media/app_logo_invert.png": "/DexcomCGM/static/media/app_logo_invert.69feebaf.png",
     "static/media/App.css": "/DexcomCGM/static/media/thirsty-two-small.8845d370.png",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.bcebdbf5.js",
     "static/css/2.9de105d4.chunk.css",
     "static/js/2.d59f8e77.chunk.js",
-    "static/css/main.843625fd.chunk.css",
+    "static/css/main.d5f24114.chunk.css",
     "static/js/main.26fd721f.chunk.js"
   ]
 }
