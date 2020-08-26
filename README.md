@@ -94,6 +94,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### License
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
-Copyright &copy; 2020 **_Steph Podolak_** 
+$copy 2020 - Stephanie Podolak.
+Under exclusive copyright. All rights reserved.
