@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "05c35796b2e9e2ba7cae0e25e7e9c99c",
+    "revision": "a4e97b99d6dbe695a56fbb323e5e0f04",
     "url": "/DexcomCGM/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DexcomCGM/static/css/2.9de105d4.chunk.css"
   },
   {
-    "revision": "21de61c253233cec6799",
-    "url": "/DexcomCGM/static/css/main.d5f24114.chunk.css"
+    "revision": "aa27b44a0033bb4d23da",
+    "url": "/DexcomCGM/static/css/main.ef54cc16.chunk.css"
   },
   {
     "revision": "2ac6460837474400808f",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DexcomCGM/static/js/2.d59f8e77.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "21de61c253233cec6799",
+    "revision": "aa27b44a0033bb4d23da",
     "url": "/DexcomCGM/static/js/main.26fd721f.chunk.js"
   },
   {

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DexcomCGM/precache-manifest.5df13603df76d2666aee66d7f687b712.js"
+  "/DexcomCGM/precache-manifest.703f432dd7ff925b0d13e52819248fb9.js"
 );
 
 self.addEventListener('message', (event) => {
