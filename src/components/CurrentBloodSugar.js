@@ -35,7 +35,6 @@ export default function CurrentBloodSugar(props) {
                                 How do you feel?
                             </button>
                         </div>
-                        {/* <CircleIconButton onSwitchingViews={onSwitchingViews} /> */}
                     </Grid>
                 </Grid>
             </div>
