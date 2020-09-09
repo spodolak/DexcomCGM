@@ -4,7 +4,7 @@
 
 The application displays the user's current blood sugar values and teaches the user body awareness by prompting them to log physical symptoms during critical blood sugar changes.  The user should be wearing a [Dexcom Continuous Glucose Monitor [CGM]](https://www.dexcom.com/g6/how-it-works). 
 
-[Click here to preview user interface](https://spodolak.github.io/DexcomCGM/) 
+[CLICK HERE TO PREVIEW USER INTERFACE](https://spodolak.github.io/DexcomCGM/) 
 
 #### By Steph Podolak
 
