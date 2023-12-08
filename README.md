@@ -6,7 +6,7 @@ The application displays the user's current blood sugar values and teaches the u
 
 [CLICK HERE TO PREVIEW USER INTERFACE](https://spodolak.github.io/DexcomCGM/) 
 
-#### By Steph Podolak
+#### By Stephanie Podolak
 
 ## User Stories
 
