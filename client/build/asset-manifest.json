@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/DexcomCGM/static/css/main.ab73f7ba.css",
+    "main.js": "/DexcomCGM/static/js/main.c56e2db9.js",
+    "static/media/mood.png": "/DexcomCGM/static/media/mood.2933dc78816d81bc8d88.png",
+    "static/media/blurry-vision-small.png": "/DexcomCGM/static/media/blurry-vision-small.db2bb6df9e6e947e5c0b.png",
+    "static/media/app_logo_invert.png": "/DexcomCGM/static/media/app_logo_invert.5b7686e0d5caa717b833.png",
+    "static/media/thirsty-two-small.png": "/DexcomCGM/static/media/thirsty-two-small.ba553b8e466e83934b5d.png",
+    "static/media/frequent-urination-two-small.png": "/DexcomCGM/static/media/frequent-urination-two-small.2fb6420c2e70f02d8c9a.png",
+    "static/media/dizzy-small.png": "/DexcomCGM/static/media/dizzy-small.08204734966d3e4296a2.png",
+    "static/media/headache-small.png": "/DexcomCGM/static/media/headache-small.77c0106240ab2cf2416b.png",
+    "static/media/irritable-small.png": "/DexcomCGM/static/media/irritable-small.0bdfcd67ac8877a0f150.png",
+    "static/media/sweaty-text-small.png": "/DexcomCGM/static/media/sweaty-text-small.b7c337a7d409c3c26018.png",
+    "static/media/frequent-urination-text-small.png": "/DexcomCGM/static/media/frequent-urination-text-small.2a57156e8be87f6ef345.png",
+    "static/media/sleepy-small.png": "/DexcomCGM/static/media/sleepy-small.5bbdee0ada570893a265.png",
+    "static/media/shaky-small.png": "/DexcomCGM/static/media/shaky-small.2c192ac06f94852329a0.png",
+    "static/media/blurry-vision-text-small.png": "/DexcomCGM/static/media/blurry-vision-text-small.e614ee612015c1adc650.png",
+    "static/media/sweaty-small.png": "/DexcomCGM/static/media/sweaty-small.16c2348bee5ced77d029.png",
+    "static/media/hungry-small.png": "/DexcomCGM/static/media/hungry-small.8f135b8adce9a0a2e4d4.png",
+    "static/media/headache-text-small.png": "/DexcomCGM/static/media/headache-text-small.c83aa0fa75c68f5d3f1e.png",
+    "static/media/hungry-text-small.png": "/DexcomCGM/static/media/hungry-text-small.ed32018eba026017c13e.png",
+    "static/media/shaky-text-small.png": "/DexcomCGM/static/media/shaky-text-small.c9b03dd28c1286c4236f.png",
+    "static/media/irritable-text-small.png": "/DexcomCGM/static/media/irritable-text-small.a72442d8acbca7a04f03.png",
+    "static/media/thirsty-text-small.png": "/DexcomCGM/static/media/thirsty-text-small.a29744b075eba5114126.png",
+    "index.html": "/DexcomCGM/index.html",
+    "main.ab73f7ba.css.map": "/DexcomCGM/static/css/main.ab73f7ba.css.map",
+    "main.c56e2db9.js.map": "/DexcomCGM/static/js/main.c56e2db9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab73f7ba.css",
+    "static/js/main.c56e2db9.js"
+  ]
+}
