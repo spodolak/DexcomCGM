@@ -15,8 +15,8 @@ function Dexcom(props) {
         <React.Fragment>
             <Grid container className="app-logo-fade-in" >
                 <Grid item xs={12}>
-                    <img className="app-logo-overlay" src={logo} alt="icon" width="300px" height="300px" />
-                    <div className="app-logo"/>
+                    <img id="app-logo-overlay" src={logo} alt="icon" width="300px" height="300px" />
+                    <div id="app-logo-animation"/>
                 </Grid>
                 <Grid item xs={12}>
                     <h4>Your child's diabetic mood ring</h4><br></br>

@@ -14,18 +14,25 @@
   margin-bottom: 100px;
 }
 
-.app-log-overlay {
-    position: relative;
+/* #app-log-overlay {
+  position: relative;
+  z-index: 1;
+} */
+
+/* todo troubleshoot img tag to respect above class */
+img { 
+  position: relative;
+  z-index: 1;
 }
 
-.app-logo {
+#app-logo-animation {
     position: relative;
     margin: auto;
     width: 290px;
     height: 280px;
     top: -290px;
     margin-bottom: -280px;
-    z-index: -1;
+    z-index: 0;
     background: linear-gradient(315deg, #ccd45f, #2d268e, #17bb9f, #d0259c);
     background-size: 800% 800%;
     -webkit-animation: LogoAnimation 19s ease infinite;

@@ -26,6 +26,7 @@ app.get('/authorizeDexcomUser', (req, res) => {
     fetch(`https://`+process.env.DEXCOM_API_ENVIRONMENT+`/v2/oauth2/token`, requestOptions) //Fetch sandbox dev token
         .then(response => response.json())
         .then((response) => {
+            console.log(response)
             getBloodSugars(response.access_token).then(values => {
                 res.json(values);
             });
