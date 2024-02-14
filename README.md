@@ -4,7 +4,7 @@
 
 The application displays the user's current blood sugar values and teaches the user body awareness by prompting them to log physical symptoms during critical blood sugar changes.  The user should be wearing a [Dexcom Continuous Glucose Monitor [CGM]](https://www.dexcom.com/g6/how-it-works). 
 
-[CLICK HERE TO PREVIEW USER INTERFACE]([https://spodolak.github.io/DexcomCGM/](https://diabetic-mood-ring-front-end-7190da4f9707.herokuapp.com/)) 
+[CLICK HERE TO PREVIEW USER INTERFACE](https://diabetic-mood-ring-front-end-7190da4f9707.herokuapp.com/) 
 
 #### By Stephanie Podolak
 
